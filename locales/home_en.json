@@ -7,6 +7,8 @@
   "slide3H2": "A modern dormitory with Japanese alumni instructors that ensures intensive learning and daily mentoring for every trainee.",
   "mapHeader": "Total Participants",
   "mapContent": "5000",
+  "mapEmbedUrl": "https://www.google.com/maps?q=Japan&output=embed",
+  "mapEmbedNote": "This Google Map is linked to the LPK Asta Karya placement spreadsheet so updates appear automatically.",
   "heroTitle": "Official Documents of LPK Asta Karya",
   "heroSubtitle": "All of our up-to-date information lives in a continuously maintained Google Document managed by the Asta Karya team.",
   "heroButtonLabel": "Open Full Document",
