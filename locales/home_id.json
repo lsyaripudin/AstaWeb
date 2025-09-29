@@ -1,10 +1,26 @@
 {
-  "slide1H1": "Sending Organization",
-  "slide1H3": "Lembaga Pelatihan Kerja Asta Karya adalah lembaga resmi dan terakreditasi sebagai Sending Organization ke Jepang. Kami menyalurkan siswa-siswi kami sebagai tenaga magang yang akan ditempatkan di Jepang dengan durasi kontrak yang bervariatif.",
-  "slide2H1": "Program",
-  "slide2H2": "Jenis kerja yang akan diambil siswa cukup beragam dan durasi kontrak selama menjadi pemagangan pun bervariasi. Ada banyak hal yang siswa harus pahami mengenai program magang ini agar tidak salah langkah dalam mengambil keputusan baik dalam jenis kerja ataupun dalam jenis visa.",
-  "slide3H1": "Training Center",
-  "slide3H2": "Magang akan membawa Peserta keluar dari zona nyaman mereka, menempuh perjalanan dan pengalaman hidup di Jepang akan mengubah perspektif hidup mereka, membawa pengalaman baru diluar CV mereka. Maka dari itu kami bekali peserta dengan dasar-dasar mental yang kuat!",
-  "mapHeader": "Total Siswa",
-  "mapContent": "5000"
+  "heroTitle": "Dokumentasi Resmi LPK Asta Karya",
+  "heroSubtitle": "Seluruh informasi terbaru kami kini terpusat dalam dokumen Google yang selalu diperbarui oleh tim LPK Asta Karya.",
+  "heroButtonLabel": "Buka Dokumen Lengkap",
+  "heroSupport": "Gunakan tombol di atas untuk membaca versi penuh dan menyalin tautan dokumen jika dibutuhkan.",
+  "docUrl": "https://docs.google.com/document/d/1kqhuIBQGB0uZyoScUHngD6b-8LNZXQ483dYiOn-6AnA/edit?usp=drivesdk",
+  "docEmbedUrl": "https://docs.google.com/document/d/1kqhuIBQGB0uZyoScUHngD6b-8LNZXQ483dYiOn-6AnA/preview",
+  "docNote": "Apabila pratinjau tidak muncul, klik tombol \"Buka Dokumen Lengkap\" atau salin tautannya secara manual.",
+  "highlights": [
+    {
+      "icon": "fa-refresh",
+      "title": "Konten Selalu Terkini",
+      "description": "Perubahan apapun pada dokumen Google akan langsung tercermin di halaman ini."
+    },
+    {
+      "icon": "fa-file-text-o",
+      "title": "Satu Sumber Terpadu",
+      "description": "Seluruh informasi profil, program, dan persyaratan dipusatkan dalam satu dokumen resmi."
+    },
+    {
+      "icon": "fa-external-link",
+      "title": "Mudah Diakses",
+      "description": "Buka dokumen di tab baru untuk pengalaman membaca penuh serta opsi unduh jika diperlukan."
+    }
+  ]
 }
