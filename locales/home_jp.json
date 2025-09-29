@@ -6,5 +6,30 @@
   "slide3H1": "バンドン研修センター",
   "slide3H2": "日本経験者の講師が常駐するモダンな寄宿舎で、日々の学習と生活指導を行っています。",
   "mapHeader": "参加者総数",
-  "mapContent": "5000"
+  "mapContent": "5000",
+  "mapContent": "5000",
+  "heroTitle": "LPK Asta Karya 公式ドキュメント",
+  "heroSubtitle": "最新の情報は常に更新される Google ドキュメントに集約されています。",
+  "heroButtonLabel": "ドキュメントを開く",
+  "heroSupport": "上のボタンから完全版を表示し、必要であればリンクをコピーしてください。",
+  "docUrl": "https://docs.google.com/document/d/1kqhuIBQGB0uZyoScUHngD6b-8LNZXQ483dYiOn-6AnA/edit?usp=drivesdk",
+  "docEmbedUrl": "https://docs.google.com/document/d/1kqhuIBQGB0uZyoScUHngD6b-8LNZXQ483dYiOn-6AnA/preview",
+  "docNote": "プレビューが表示されない場合は「ドキュメントを開く」をクリックするか、リンクをコピーしてください。",
+  "highlights": [
+    {
+      "icon": "fa-refresh",
+      "title": "常に最新",
+      "description": "Google ドキュメントの更新内容がこのページにも即時反映されます。"
+    },
+    {
+      "icon": "fa-file-text-o",
+      "title": "情報を一元化",
+      "description": "プロフィール、プログラム、要件などを公式ドキュメント一つにまとめました。"
+    },
+    {
+      "icon": "fa-external-link",
+      "title": "簡単アクセス",
+      "description": "新しいタブで開いて全文表示やダウンロードを行うことができます。"
+    }
+  ]
 }

@@ -6,5 +6,29 @@
   "slide3H1": "Training Center Bandung",
   "slide3H2": "Fasilitas asrama modern dengan instruktur alumni Jepang memastikan pembelajaran intensif dan pendampingan harian bagi setiap peserta.",
   "mapHeader": "Total Peserta",
-  "mapContent": "5000"
+  "mapContent": "5000",
+  "heroTitle": "Dokumentasi Resmi LPK Asta Karya",
+  "heroSubtitle": "Seluruh informasi terbaru kami kini terpusat dalam dokumen Google yang selalu diperbarui oleh tim LPK Asta Karya.",
+  "heroButtonLabel": "Buka Dokumen Lengkap",
+  "heroSupport": "Gunakan tombol di atas untuk membaca versi penuh dan menyalin tautan dokumen jika dibutuhkan.",
+  "docUrl": "https://docs.google.com/document/d/1kqhuIBQGB0uZyoScUHngD6b-8LNZXQ483dYiOn-6AnA/edit?usp=drivesdk",
+  "docEmbedUrl": "https://docs.google.com/document/d/1kqhuIBQGB0uZyoScUHngD6b-8LNZXQ483dYiOn-6AnA/preview",
+  "docNote": "Apabila pratinjau tidak muncul, klik tombol \"Buka Dokumen Lengkap\" atau salin tautannya secara manual.",
+  "highlights": [
+    {
+      "icon": "fa-refresh",
+      "title": "Konten Selalu Terkini",
+      "description": "Perubahan apapun pada dokumen Google akan langsung tercermin di halaman ini."
+    },
+    {
+      "icon": "fa-file-text-o",
+      "title": "Satu Sumber Terpadu",
+      "description": "Seluruh informasi profil, program, dan persyaratan dipusatkan dalam satu dokumen resmi."
+    },
+    {
+      "icon": "fa-external-link",
+      "title": "Mudah Diakses",
+      "description": "Buka dokumen di tab baru untuk pengalaman membaca penuh serta opsi unduh jika diperlukan."
+    }
+  ]
 }

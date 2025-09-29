@@ -27,6 +27,14 @@ type Header struct {
 	Recruitment    string `json:"recruitment"`
 	Gallery        string `json:"gallery"`
 	Youtube        string `json:"youtube"`
+	About      string `json:"about"`
+	Program    string `json:"program"`
+	Training   string `json:"training"`
+	Media      string `json:"media"`
+	Highlights string `json:"highlights"`
+	Document   string `json:"document"`
+	Galery     string `json:"galery"`
+	ChangeLang string `json:"change_language"`
 }
 
 func loadJSONFile(filePath string, target interface{}) error {
