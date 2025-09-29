@@ -36,9 +36,16 @@
                                 </div>
                                 <div class="collapse navbar-collapse" id="main-nav">
                                         <ul class="nav navbar-nav navbar-right">
-                                                <li><a href="#home" class="smoothScroll">{{ .Header.Home }}</a></li>
-                                                <li><a href="#highlights" class="smoothScroll">{{ .Header.Highlights }}</a></li>
-                                                <li><a href="#doc" class="smoothScroll">{{ .Header.Document }}</a></li>
+                                                <li><a href="#home" class="smoothScroll">Beranda</a></li>
+                                                <li><a href="#foreword" class="smoothScroll">Kata Pengantar</a></li>
+                                                <li><a href="#profile" class="smoothScroll">Profil</a></li>
+                                                <li><a href="#background" class="smoothScroll">Latar Belakang</a></li>
+                                                <li><a href="#vision" class="smoothScroll">Visi &amp; Misi</a></li>
+                                                <li><a href="#organization" class="smoothScroll">Organisasi</a></li>
+                                                <li><a href="#training-center" class="smoothScroll">Training Center</a></li>
+                                                <li><a href="#curriculum" class="smoothScroll">Kurikulum</a></li>
+                                                <li><a href="#recruitment" class="smoothScroll">Rekrutmen</a></li>
+                                                <li><a href="#resources" class="smoothScroll">Media</a></li>
                                                 <li><a href="/galery">{{ .Header.Galery }}</a></li>
                                                 <li class="dropdown nav-language">
                                                         <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">🌐</a>
@@ -63,7 +70,8 @@
                                 <div class="col-md-12">
                                         <p class="footer-text">© 2024 LPK Asta Karya. All rights reserved.</p>
                                         <div class="footer-links">
-                                                <a href="{{ if .Home }}{{ .Home.DocURL }}{{ else }}#{{ end }}" target="_blank" rel="noopener" class="footer-link">{{ .Header.Document }}</a>
+                                                <a href="#home" class="footer-link smoothScroll">Beranda</a>
+                                                <a href="#resources" class="footer-link smoothScroll">Media</a>
                                                 <a href="/galery" class="footer-link">{{ .Header.Galery }}</a>
                                         </div>
                                 </div>
