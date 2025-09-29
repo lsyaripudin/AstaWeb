@@ -14,13 +14,11 @@ import (
 )
 
 type Header struct {
-	Title    string `json:"title"`
-	Home     string `json:"home"`
-	About    string `json:"about"`
-	Program  string `json:"program"`
-	Training string `json:"training"`
-	Media    string `json:"media"`
-	Galery   string `json:"galery"`
+	Title      string `json:"title"`
+	Home       string `json:"home"`
+	Highlights string `json:"highlights"`
+	Document   string `json:"document"`
+	Galery     string `json:"galery"`
 }
 
 func loadJSONFile(filePath string, target interface{}) error {
