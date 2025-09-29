@@ -330,6 +330,24 @@
                                                                 {{ end }}
                                                         </div>
                                                         {{ end }}
+                                                        {{ if .Home.MapPlacements }}
+                                                        <div class="map-placement-summary">
+                                                                {{ if .Home.MapListTitle }}
+                                                                <h4>{{ .Home.MapListTitle }}</h4>
+                                                                {{ end }}
+                                                                {{ if .Home.MapListIntro }}
+                                                                <p class="map-subtitle">{{ .Home.MapListIntro }}</p>
+                                                                {{ end }}
+                                                                <div class="map-placement-grid">
+                                                                        {{ range .Home.MapPlacements }}
+                                                                        <div class="map-placement-item">
+                                                                                <span class="map-placement-prefecture">{{ .Prefecture }}</span>
+                                                                                <span class="map-placement-count">{{ .Count }}</span>
+                                                                        </div>
+                                                                        {{ end }}
+                                                                </div>
+                                                        </div>
+                                                        {{ end }}
                                                 </div>
                                         </div>
                                 </div>
