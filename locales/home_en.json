@@ -1,0 +1,34 @@
+{
+  "slide1H1": "Official Sending Organization",
+  "slide1H3": "LPK Asta Karya helps Indonesian talent grow in Japan through legal, transparent, and internationally compliant apprenticeship programs.",
+  "slide2H1": "Structured Internship Pathway",
+  "slide2H2": "The pre-departure curriculum blends Japanese language classes, mindset coaching, and workplace simulations to prepare participants for Japan's industry standards.",
+  "slide3H1": "Bandung Training Center",
+  "slide3H2": "A modern dormitory with Japanese alumni instructors that ensures intensive learning and daily mentoring for every trainee.",
+  "mapHeader": "Total Participants",
+  "mapContent": "5000",
+  "heroTitle": "Official Documents of LPK Asta Karya",
+  "heroSubtitle": "All of our up-to-date information lives in a continuously maintained Google Document managed by the Asta Karya team.",
+  "heroButtonLabel": "Open Full Document",
+  "heroSupport": "Use the button above to view the complete version and copy the document link whenever needed.",
+  "docUrl": "https://docs.google.com/document/d/1kqhuIBQGB0uZyoScUHngD6b-8LNZXQ483dYiOn-6AnA/edit?usp=drivesdk",
+  "docEmbedUrl": "https://docs.google.com/document/d/1kqhuIBQGB0uZyoScUHngD6b-8LNZXQ483dYiOn-6AnA/preview",
+  "docNote": "If the preview does not load, click 'Open Full Document' or copy the link manually.",
+  "highlights": [
+    {
+      "icon": "fa-refresh",
+      "title": "Always Updated",
+      "description": "Any change in the Google Document is instantly reflected on this page."
+    },
+    {
+      "icon": "fa-file-text-o",
+      "title": "Single Source",
+      "description": "All profile, program, and requirement details are consolidated in one official document."
+    },
+    {
+      "icon": "fa-external-link",
+      "title": "Easy Access",
+      "description": "Open the document in a new tab for the full reading experience or to download when required."
+    }
+  ]
+}

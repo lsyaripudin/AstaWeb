@@ -33,6 +33,9 @@ type Header struct {
 	Highlights  string `json:"highlights"`
 	Galery      string `json:"galery"`
 	Youtube     string `json:"youtube"`
+	AboutMenu   string `json:"about_menu"`
+	ProgramMenu string `json:"program_menu"`
+	InfoMenu    string `json:"info_menu"`
 	ChangeLang  string `json:"change_language"`
 }
 
@@ -52,18 +55,44 @@ func main() {
 	router.Static("/static", "./static")
 
 	router.GET("/", func(c *gin.Context) {
-		lang := c.DefaultQuery("lang", "id")
+		requestedLang := c.DefaultQuery("lang", "id")
+		supportedLangs := map[string]struct{}{
+			"id": {},
+			"jp": {},
+			"en": {},
+		}
+
+		lang := requestedLang
+		if _, ok := supportedLangs[lang]; !ok {
+			lang = "id"
+		}
 
 		var header Header
 		headerFile := fmt.Sprintf("locales/header_%s.json", lang)
 		if err := loadJSONFile(headerFile, &header); err != nil {
 			log.Println("Error loading header:", err)
+			if lang != "id" {
+				if err := loadJSONFile("locales/header_id.json", &header); err != nil {
+					log.Println("Error loading fallback header:", err)
+				} else {
+					lang = "id"
+				}
+			}
 		}
 
 		homeData, err := app.LoadJSONFile(lang)
 		if err != nil {
 			log.Println("Error loading home data", err)
-			homeData = nil
+			if lang != "id" {
+				homeData, err = app.LoadJSONFile("id")
+				if err != nil {
+					log.Println("Error loading fallback home data", err)
+				} else {
+					lang = "id"
+				}
+			} else {
+				homeData = nil
+			}
 		}
 
 		c.HTML(http.StatusOK, "layout.html", gin.H{
