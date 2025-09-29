@@ -1,6 +1,6 @@
 // Preloader
 $(window).on('load', function () {
-    $('.preloader').fadeOut(800);
+    $('.preloader').fadeOut(1000);
 });
 
 $(document).ready(function () {
@@ -9,23 +9,74 @@ $(document).ready(function () {
         $('.navbar-collapse').collapse('hide');
     });
 
-    // Navbar shadow on scroll
+    // Navbar style on scroll
     $(window).on('scroll', function () {
-        if ($('.custom-navbar').offset().top > 40) {
-            $('.custom-navbar').addClass('navbar-solid');
+        if ($('.navbar').offset().top > 50) {
+            $('.navbar-fixed-top').addClass('top-nav-collapse');
         } else {
-            $('.custom-navbar').removeClass('navbar-solid');
+            $('.navbar-fixed-top').removeClass('top-nav-collapse');
         }
     });
 
-    // Smooth scroll for anchors with class .smoothScroll
+    // FlexSlider hero
+    if ($('.flexslider').length) {
+        $('.flexslider').flexslider({
+            animation: 'fade',
+            directionNav: false,
+        });
+    }
+
+    // Isotope filtering
+    if ($('.iso-box-wrapper').length > 0) {
+        var $container = $('.iso-box-wrapper');
+        var $imgs = $('.iso-box img');
+
+        $container.imagesLoaded(function () {
+            $container.isotope({
+                layoutMode: 'fitRows',
+                itemSelector: '.iso-box',
+            });
+
+            $imgs.load(function () {
+                $container.isotope('reLayout');
+            });
+        });
+
+        $('.filter-wrapper li a').on('click', function () {
+            var $this = $(this);
+            var filterValue = $this.attr('data-filter');
+
+            $container.isotope({
+                filter: filterValue,
+                animationOptions: {
+                    duration: 750,
+                    easing: 'linear',
+                    queue: false,
+                },
+            });
+
+            if ($this.hasClass('selected')) {
+                return false;
+            }
+
+            var filterWrapper = $this.closest('.filter-wrapper');
+            filterWrapper.find('.selected').removeClass('selected');
+            $this.addClass('selected');
+            return false;
+        });
+    }
+
+    // Smooth scroll for anchors
     $('a.smoothScroll').on('click', function (event) {
         var target = this.hash;
         if (target && $(target).length) {
             event.preventDefault();
-            $('html, body').animate({
-                scrollTop: $(target).offset().top - 60
-            }, 700);
+            $('html, body').animate(
+                {
+                    scrollTop: $(target).offset().top - 50,
+                },
+                700
+            );
         }
     });
 

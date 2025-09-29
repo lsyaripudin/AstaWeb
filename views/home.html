@@ -1,445 +1,148 @@
 {{ define "content" }}
-<section id="home" class="hero-section">
-        <div class="container">
-                <div class="row align-middle">
-                        <div class="col-lg-6">
-                                <div class="hero-copy">
-                                        <span class="hero-eyebrow">LPK Asta Karya</span>
-                                        <h1 class="hero-title">Membuka Gerbang Karier Global bagi Talenta Indonesia</h1>
-                                        <p class="hero-subtitle">Program terintegrasi yang memadukan pelatihan teknis, pembinaan karakter, dan pemahaman budaya Jepang untuk mencetak generasi profesional yang siap bersaing di dunia kerja internasional.</p>
-                                        <div class="hero-actions">
-                                                <a class="btn btn-primary hero-btn smoothScroll" href="#foreword">
-                                                        <span>Jelajahi Profil</span>
-                                                        <i class="fa fa-arrow-down"></i>
-                                                </a>
-                                                <p class="hero-support">Mulai dari pengenalan lembaga hingga proses rekrutmen — semua tersaji dalam satu halaman komprehensif.</p>
-                                        </div>
-                                </div>
-                        </div>
-                        <div class="col-lg-6">
-                                <div class="hero-illustration">
-                                        <div class="hero-blob"></div>
-                                        <div class="hero-card">
-                                                <span class="hero-card-label"><i class="fa fa-graduation-cap"></i> Program Pemagangan Jepang</span>
-                                                <h2 class="hero-card-title">Sejak 2016</h2>
-                                                <p class="hero-card-text">Menghubungkan pemuda Indonesia dengan peluang belajar dan bekerja di Jepang melalui kurikulum modern dan tim pelatih berpengalaman.</p>
-                                                <div class="hero-stats">
-                                                        <div class="hero-stat">
-                                                                <span class="hero-stat-number">100+</span>
-                                                                <span class="hero-stat-label">Kapasitas peserta</span>
-                                                        </div>
-                                                        <div class="hero-stat">
-                                                                <span class="hero-stat-number">3</span>
-                                                                <span class="hero-stat-label">Bahasa resmi konten</span>
+        <!-- start home -->
+        <section id="home">
+                <div class="overlay">
+                        <div class="flexslider">
+                                <ul class="slides">
+                                        <li>
+                                                <img src="/static/images/slider/1.jpg" alt="Slide 1">
+                                                <div class="slider-caption">
+                                                        <div class="templatemo_homewrapper">
+                                                                <h1 style="color: rgb(35,147,224);" class="wow bounceIn">{{ .Home.Home1H1 }}</h1>
+                                                                <h3 class="wow bounce">{{ .Home.Home1H3 }}</h3>
                                                         </div>
                                                 </div>
+                                        </li>
+                                        <li>
+                                                <img src="/static/images/slider/2.jpg" alt="Slide 2">
+                                                <div class="slider-caption">
+                                                        <div class="templatemo_homewrapper">
+                                                                <h1 style="color: black;">{{ .Home.Home2H1 }}</h1>
+                                                                <h3>{{ .Home.Home2H3 }}</h3>
+                                                        </div>
+                                                </div>
+                                        </li>
+                                        <li>
+                                                <img src="/static/images/slider/3.jpg" alt="Slide 3">
+                                                <div class="slider-caption">
+                                                        <div class="templatemo_homewrapper">
+                                                                <h1 style="color: orange;">{{ .Home.Home3H1 }}</h1>
+                                                                <h3>{{ .Home.Home3H3 }}</h3>
+                                                        </div>
+                                                </div>
+                                        </li>
+                                </ul>
+                        </div>
+                </div>
+        </section>
+        <!-- end home -->
+
+        <!-- start map -->
+        <div class="divider_map">
+                <div class="overlay_map">
+                        <div class="container">
+                                <div class="row">
+                                        <div class="divider_map-des">
+                                                <h3 class="text-uppercase">{{ .Home.MapHeader }} : {{ .Home.MapContent }}</h3>
+                                                <div id="map"></div>
                                         </div>
                                 </div>
                         </div>
                 </div>
         </div>
-</section>
+        <!-- end map -->
 
-<section id="foreword" class="section">
-        <div class="container">
-                <div class="section-heading text-center">
-                        <span class="section-eyebrow">Kata Pengantar</span>
-                        <h2 class="section-title">Dedikasi LPK Asta Karya untuk Masa Depan Global</h2>
-                        <p class="section-subtitle">Sambutan resmi dalam tiga bahasa sebagai wujud komitmen internasional lembaga.</p>
-                </div>
-                <div class="content-grid grid-3">
-                        <article class="content-card">
-                                <h3 class="content-card-title">Bahasa Indonesia</h3>
-                                <p>Puji dan syukur kami panjatkan ke hadirat Tuhan Yang Maha Esa, karena atas rahmat dan karunia-Nya, kami dapat menyusun dan menghadirkan company profile Lembaga Pelatihan Kerja (LPK) Asta Karya ke Jepang ini. Lembaga kami berkomitmen untuk memberikan program pelatihan yang berkualitas dan sesuai dengan standar kebutuhan pasar kerja di Jepang, sehingga para peserta pelatihan dapat memiliki keterampilan dan kompetensi yang memadai untuk bersaing secara global.</p>
-                                <p>Program pelatihan ini dirancang dengan tujuan memberikan bekal keahlian praktis dan wawasan budaya yang mendalam tentang Jepang, sehingga para peserta tidak hanya siap dari segi teknis, tetapi juga mampu menyesuaikan diri dengan lingkungan kerja dan sosial di sana. Kami percaya, melalui pelatihan ini, kesempatan untuk bekerja dan berkarir di Jepang dapat diwujudkan secara optimal.</p>
-                                <p>Kami mengucapkan terima kasih kepada semua pihak yang telah mendukung terlaksananya program ini, dan berharap para peserta dapat memanfaatkan kesempatan ini dengan sebaik-baiknya untuk masa depan yang lebih cerah.</p>
-                                <p>Semoga program pelatihan ini membawa manfaat besar dan menjadi langkah awal yang baik dalam meraih kesuksesan di dunia kerja internasional.</p>
-                        </article>
-                        <article class="content-card">
-                                <h3 class="content-card-title">日本語</h3>
-                                <p>ごあいさつ<br>まず初めに、LPK ASTA KARYA職業訓練機関（以下「アスタ・カルヤ」）の企業紹介資料を皆様にお届けできることを、心より光栄に存じます。これはひとえに神のご加護と関係者の皆様のご支援の賜物であると、深く感謝申し上げます。</p>
-                                <p>ASTA KARYA は、日本の労働市場のニーズに応じた質の高い訓練を提供することを使命とし、参加者が国際社会でも通用するスキルと能力を身につけられるよう努めております。</p>
-                                <p>訓練プログラムは、実践的な技能の習得だけでなく、日本の文化や社会に対する深い理解も重視して設計されています。これにより、参加者は技術面のみならず、日本での職場環境や生活環境にも柔軟に適応できる人材として成長することが可能となります。</p>
-                                <p>訓練生の皆様には、この貴重な機会を最大限に活かし、より明るい未来への一歩を踏み出していただきたいと期待おります。または、この職業訓練プログラムが、皆様にとって大きな価値をもたらし、国際的なキャリア成功への第一歩となることを、心から願っております。</p>
-                        </article>
-                        <article class="content-card">
-                                <h3 class="content-card-title">English</h3>
-                                <p>We are pleased to present the company profile of Lembaga Pelatihan Kerja (LPK) Asta Karya, made possible through the grace and blessings of Almighty God. This profile reflects our dedication to providing high-quality training programs that are aligned with the standards and demands of the Japanese labor market. Our mission is to equip participants with the skills, knowledge, and competencies required to excel and remain competitive in the global workforce.</p>
-                                <p>The training programs we offer are designed not only to develop practical expertise but also to instill a deep understanding of Japanese culture. This holistic approach ensures that participants are well-prepared to adapt effectively to both professional and social environments in Japan. Through this program, we aim to maximize opportunities for employment and long-term career development in Japan.</p>
-                                <p>We extend our sincere gratitude to all stakeholders who have contributed to the realization of this program. We are confident that the participants will take full advantage of this opportunity as a strategic investment in their future success.</p>
-                                <p>We firmly believe that this initiative will generate significant value and serve as a solid foundation for building sustainable careers in the international labor market.</p>
-                        </article>
-                </div>
-        </div>
-</section>
-
-<section id="profile" class="section section-muted">
-        <div class="container">
-                <div class="section-heading text-center">
-                        <span class="section-eyebrow">Profil Lembaga</span>
-                        <h2 class="section-title">Informasi Utama LPK Asta Karya</h2>
-                        <p class="section-subtitle">Identitas dan kontak resmi lembaga dalam tiga bahasa untuk kemudahan kolaborasi internasional.</p>
-                </div>
-                <div class="content-grid grid-3">
-                        <article class="info-card">
-                                <h3 class="info-card-title">Bahasa Indonesia</h3>
-                                <dl class="info-list">
-                                        <div><dt>Nama Lembaga</dt><dd>Lembaga Pelatihan Kerja (LPK) Asta Karya</dd></div>
-                                        <div><dt>Nama Pimpinan</dt><dd>Muhammad Arif Ramadhan</dd></div>
-                                        <div><dt>Kantor Pusat</dt><dd>Ruko No.3B, Jl. Pasar Minggu Raya KM.19 No.3B, RT.003 RW.05, Kelurahan Pejaten Barat, Kecamatan Pasar Minggu, Kota Jakarta Selatan, DKI Jakarta, Indonesia 12510</dd></div>
-                                        <div><dt>Telepon</dt><dd><a href="tel:+6282210020247">+62 822-1002-0247</a> (WA &amp; LINE)</dd></div>
-                                        <div><dt>Training Center</dt><dd>Jl. H. Ibrahim Adjie No.99, RT.03 RW.02, Kelurahan Cijawura, Kecamatan Buah Batu, Kota Bandung, Indonesia 40287</dd></div>
-                                        <div><dt>Telepon Training Center</dt><dd><a href="tel:+6282210020246">+62 822-1002-0246</a> (WA &amp; LINE)</dd></div>
-                                        <div><dt>Email</dt><dd><a href="mailto:astakarya.adm@gmail.com">astakarya.adm@gmail.com</a></dd></div>
-                                        <div><dt>Kontak Person</dt><dd><a href="tel:+6282299338862">+62 822-9933-8862</a></dd></div>
-                                        <div><dt>Nomor Izin SO</dt><dd>2/4473/HK.03.01/XI/2023</dd></div>
-                                </dl>
-                        </article>
-                        <article class="info-card">
-                                <h3 class="info-card-title">日本語</h3>
-                                <dl class="info-list">
-                                        <div><dt>訓練機関名</dt><dd>LPK Asta Karya（アスタ・カルヤ職業訓練機関）</dd></div>
-                                        <div><dt>代表者名</dt><dd>ムハンマド・アリフ・ラマダン</dd></div>
-                                        <div><dt>本社所在地</dt><dd>Ruko No.3B, Jl. Pasar Minggu Raya KM.19 No.3B, RT.003 / RW.05, Kelurahan Pejaten Barat, Kecamatan Pasar Minggu, Jakarta Selatan, DKI Jakarta, Indonesia 12510</dd></div>
-                                        <div><dt>電話番号</dt><dd><a href="tel:+6282210020247">+62 822-1002-0247</a>（インドネシア語対応 / Whatsapp &amp; LINE）<br><a href="tel:+6282299338862">+62 822-9933-8862</a>（日本語対応）</dd></div>
-                                        <div><dt>トレーニングセンター所在地</dt><dd>Jl. H. Ibrahim Adjie No.99, RT.03 / RW.02, Cijawura, Buah Batu, Kota Bandung, Indonesia 40287</dd></div>
-                                        <div><dt>電話番号</dt><dd><a href="tel:+6282210020246">+62 822-1002-0246</a>（インドネシア語対応 / Whatsapp &amp; LINE）<br><a href="tel:+6282299338862">+62 822-9933-8862</a>（日本語対応）</dd></div>
-                                        <div><dt>Eメール</dt><dd><a href="mailto:astakarya.adm@gmail.com">astakarya.adm@gmail.com</a></dd></div>
-                                        <div><dt>送出機関許可番号</dt><dd>2/4473/HK.03.01/XI/2023</dd></div>
-                                </dl>
-                        </article>
-                        <article class="info-card">
-                                <h3 class="info-card-title">English</h3>
-                                <dl class="info-list">
-                                        <div><dt>Company Name</dt><dd>Lembaga Pelatihan Kerja (LPK) Asta Karya</dd></div>
-                                        <div><dt>Director</dt><dd>Muhammad Arif Ramadhan</dd></div>
-                                        <div><dt>Head Office</dt><dd>Ruko No.3B, Jl. Pasar Minggu Raya KM.19 No.3B, RT.003 RW.05, Kelurahan Pejaten Barat, Kecamatan Pasar Minggu, South Jakarta, DKI Jakarta, Indonesia 12510</dd></div>
-                                        <div><dt>Phone</dt><dd><a href="tel:+6282210020247">+62 822-1002-0247</a> (WA &amp; LINE)<br><a href="tel:+6282299338862">+62 822-9933-8862</a></dd></div>
-                                        <div><dt>Training Center</dt><dd>Jl. H. Ibrahim Adjie No.99, RT.03 / RW.02, Cijawura, Buah Batu District, Bandung City, Indonesia 40287</dd></div>
-                                        <div><dt>Training Center Phone</dt><dd><a href="tel:+6282210020246">+62 822-1002-0246</a> (WA &amp; LINE)<br><a href="tel:+6282299338862">+62 822-9933-8862</a></dd></div>
-                                        <div><dt>Email</dt><dd><a href="mailto:astakarya.adm@gmail.com">astakarya.adm@gmail.com</a></dd></div>
-                                        <div><dt>Sending Organization Register Number</dt><dd>2/4473/HK.03.01/XI/2023</dd></div>
-                                </dl>
-                        </article>
-                </div>
-        </div>
-</section>
-
-<section id="background" class="section">
-        <div class="container">
-                <div class="section-heading text-center">
-                        <span class="section-eyebrow">Latar Belakang</span>
-                        <h2 class="section-title">Perjalanan Asta Karya Mewujudkan Mimpi ke Jepang</h2>
-                        <p class="section-subtitle">Cerita pendirian dan nilai yang dipegang teguh dalam membina generasi muda.</p>
-                </div>
-                <div class="content-grid grid-3">
-                        <article class="story-card">
-                                <h3 class="story-card-title">Bahasa Indonesia</h3>
-                                <p>Lembaga Pelatihan Kerja (LPK) Asta Karya merupakan Sending Organization (SO) resmi yang didirikan pada bulan Desember 2016 dan berlokasi di Tebet, Jakarta Selatan. Lembaga ini berada di bawah naungan PT. Ladang Berdikari Indonesia. Pendirinya merupakan seorang alumni dari salah satu universitas di Indonesia dengan latar belakang pendidikan di bidang Bahasa Jepang, serta lulusan dari Sekolah Bahasa Jepang (Nihongo Gakkou) di Prefektur Shizuoka, Jepang.</p>
-                                <p>LPK Asta Karya didirikan dengan tujuan mulia, yaitu memberikan kesempatan bagi generasi muda Indonesia untuk merasakan secara langsung atmosfer belajar dan bekerja (magang) di Jepang. Inisiatif ini tidak hanya ditujukan sebagai upaya peningkatan kompetensi dan daya saing sumber daya manusia Indonesia di kancah internasional, tetapi juga sebagai wujud nyata dari panggilan hati pendirinya untuk mengajar dan mengamalkan ilmu yang telah diperoleh.</p>
-                                <p>Selama menjalani pendidikan di Jepang, pendiri LPK Asta Karya juga aktif melakukan berbagai pekerjaan paruh waktu di berbagai sektor, seperti toko serba ada, restoran, dan pabrik. Pengalaman tersebut memberikan pemahaman langsung mengenai etos kerja, tata krama, dan budaya kerja masyarakat Jepang yang dikenal dengan kedisiplinan tinggi, ketepatan waktu, serta semangat kerja yang total.</p>
-                                <p>Nilai-nilai positif inilah yang ingin ditanamkan kepada para pemuda Indonesia dengan memfasilitasi program magang di perusahaan-perusahaan di Jepang. Harapannya, para peserta tidak hanya memperoleh keterampilan teknis, namun juga menyerap nilai-nilai profesionalisme, pola pikir maju, dan etika kerja yang baik untuk kemudian diterapkan di tanah air.</p>
-                        </article>
-                        <article class="story-card">
-                                <h3 class="story-card-title">日本語</h3>
-                                <p>アスタ・カルヤは、2016年12月に設立された送出機関であり、インドネシア・ジャカルタ特別州の南ジャカルタ市に本部を構えています。創設者は日本語を専攻し、静岡県の日本語学校を卒業した経験を持つ教育者です。</p>
-                                <p>創設者は日本滞在中、コンビニエンスストア、レストラン、工場など様々な分野での就労経験を通じ、日本社会の高い規律、時間厳守、そして全力で取り組む労働文化を体験しました。こうして得た価値観をインドネシアの若者へ共有すべく、実践的な研修と人材育成を使命としています。</p>
-                                <p>日本での学びと労働の機会を提供することで、技術だけでなくプロフェッショナリズム、先進的な思考、労働倫理を習得できるよう支援しています。修了生が帰国後もこれらの価値を活かし、国内の発展に貢献することを目指しています。</p>
-                        </article>
-                        <article class="story-card">
-                                <h3 class="story-card-title">English</h3>
-                                <p>Asta Karya Training Institute (LPK Asta Karya) is an officially accredited Sending Organization established in December 2016 and headquartered in Tebet, South Jakarta, under PT. Ladang Berdikari Indonesia. Founded by an alumnus specializing in Japanese language studies and a graduate of a Nihongo Gakkō in Shizuoka Prefecture, Japan, the institute embodies a passion for education and service.</p>
-                                <p>The institute was created to offer Indonesian youth firsthand exposure to studying and interning in Japan. This initiative enhances global competitiveness while reflecting the founder’s calling to share knowledge for the advancement of the nation.</p>
-                                <p>Having undertaken diverse part-time roles across convenience stores, restaurants, and factories, the founder experienced Japan’s disciplined, punctual, and wholehearted work ethic. These values are passed on through internship facilitation, enabling participants to absorb professionalism, progressive mindsets, and exemplary ethics that benefit Indonesia upon their return.</p>
-                        </article>
-                </div>
-        </div>
-</section>
-
-<section id="vision" class="section section-muted">
-        <div class="container">
-                <div class="section-heading text-center">
-                        <span class="section-eyebrow">Visi &amp; Misi</span>
-                        <h2 class="section-title">Menjadi Jembatan Talenta Indonesia ke Dunia</h2>
-                        <p class="section-subtitle">Orientasi strategis lembaga dalam membentuk generasi profesional berdaya saing global.</p>
-                </div>
-                <div class="content-grid grid-3">
-                        <article class="vision-card">
-                                <h3 class="vision-card-title">Bahasa Indonesia</h3>
-                                <h4>Visi</h4>
-                                <p>Menjadi lembaga pelatihan kerja yang terpercaya, profesional, dan berstandar internasional dalam mempersiapkan tenaga kerja Indonesia yang kompeten, berkarakter, dan siap bersaing di dunia kerja global, khususnya di Jepang.</p>
-                                <p>LPK Asta Karya berkomitmen membentuk generasi muda Indonesia yang unggul, mandiri, dan berintegritas melalui program pelatihan terpadu serta pengalaman kerja langsung di Jepang.</p>
-                                <h4>Misi</h4>
-                                <ul>
-                                        <li>Memberdayakan SDM Indonesia melalui pengalaman hidup dan kerja di Jepang yang membentuk pola pikir positif dan etos kerja tinggi.</li>
-                                        <li>Meningkatkan kualitas pendidikan dan kompetensi tenaga kerja melalui pelatihan teknis dan pembelajaran Bahasa Jepang berorientasi industri.</li>
-                                        <li>Berperan dalam pengurangan angka pengangguran dengan mencetak tenaga kerja terlatih dan produktif.</li>
-                                        <li>Memperkuat hubungan internasional melalui partisipasi aktif dalam program pemagangan dan kerja sama bilateral Indonesia–Jepang.</li>
-                                </ul>
-                        </article>
-                        <article class="vision-card">
-                                <h3 class="vision-card-title">日本語</h3>
-                                <h4>ビジョン</h4>
-                                <p>インドネシアの人材を国際労働市場、特に日本で活躍できる能力・人格・競争力を備えた存在として育成し、信頼される国際基準の職業訓練機関となることを目指します。</p>
-                                <p>総合的な職業訓練と日本での実務経験を通じ、若者の潜在能力と国際産業界のニーズを結びつける架け橋になります。</p>
-                                <h4>ミッション</h4>
-                                <ul>
-                                        <li>日本での生活と労働を通じ、前向きな思考、高い労働倫理、国際的視野を育成します。</li>
-                                        <li>産業ニーズに即した日本語教育および技術訓練で将来の労働者の能力を向上させます。</li>
-                                        <li>熟練した即戦力人材を育成し、国内失業率の削減に貢献します。</li>
-                                        <li>二国間協力に参加し、国際的な意識と社会的責任を育みながら世界への貢献を実現します。</li>
-                                </ul>
-                        </article>
-                        <article class="vision-card">
-                                <h3 class="vision-card-title">English</h3>
-                                <h4>Vision</h4>
-                                <p>To become a trusted, professional, and internationally recognized training institution that prepares Indonesian workers to be competent, ethical, and globally competitive with a focus on opportunities in Japan.</p>
-                                <p>We emphasize both professional skills and character development to bridge Indonesian youth potential with international industry demands.</p>
-                                <h4>Mission</h4>
-                                <ul>
-                                        <li>Empower youth with life and work experiences in Japan that build strong work ethics and global perspectives.</li>
-                                        <li>Enhance competence through technical training and Japanese language education tailored to industry needs.</li>
-                                        <li>Contribute to reducing unemployment by producing skilled, work-ready, and productive talent.</li>
-                                        <li>Strengthen international collaboration via active participation in internship programs and bilateral cooperation.</li>
-                                </ul>
-                        </article>
-                </div>
-        </div>
-</section>
-
-<section id="organization" class="section">
-        <div class="container">
-                <div class="section-heading text-center">
-                        <span class="section-eyebrow">Struktur &amp; Data</span>
-                        <h2 class="section-title">Kolaborasi Terstruktur dan Transparan</h2>
-                        <p class="section-subtitle">Menampilkan struktur organisasi serta kesiapan data pemagangan siswa.</p>
-                </div>
-                <div class="organization-layout">
-                        <div class="organization-visual">
-                                <img src="/static/images/structure_organization.png" alt="Struktur Organisasi LPK Asta Karya" class="organization-image">
-                                <p class="organization-caption">Struktur Organisasi LPK Asta Karya</p>
+        <!-- start document section -->
+        <section id="document" class="document-section">
+                <div class="container">
+                        <div class="row">
+                                <div class="col-md-6 col-sm-6 wow fadeInLeft" data-wow-delay="0.3s">
+                                        <div class="document-copy">
+                                                <h2>{{ .Home.HeroTitle }}</h2>
+                                                <hr>
+                                                <p>{{ .Home.HeroSubtitle }}</p>
+                                                <a href="{{ .Home.DocURL }}" target="_blank" rel="noopener" class="btn btn-default text-uppercase document-btn">{{ .Home.HeroButtonLabel }}</a>
+                                                <p class="document-note">{{ .Home.HeroSupport }}</p>
+                                                <p class="document-note">{{ .Home.DocNote }}</p>
+                                        </div>
+                                </div>
+                                <div class="col-md-6 col-sm-6 wow fadeInRight" data-wow-delay="0.6s">
+                                        <div class="document-frame">
+                                                {{ if .Home.DocEmbedURL }}
+                                                <iframe src="{{ .Home.DocEmbedURL }}" title="Dokumen Resmi LPK Asta Karya" loading="lazy"></iframe>
+                                                {{ else }}
+                                                <div class="document-placeholder">
+                                                        <p>Pratinjau dokumen tidak tersedia. Silakan gunakan tombol di samping untuk membuka dokumen lengkap.</p>
+                                                </div>
+                                                {{ end }}
+                                        </div>
+                                </div>
                         </div>
-                        <div class="organization-details">
-                                <div class="detail-card">
-                                        <h3 class="detail-card-title">Laporan Pengiriman Siswa</h3>
-                                        <p>Kami menyusun laporan penempatan siswa secara berkala, mencakup status keberangkatan, lokasi perusahaan mitra, serta progres adaptasi di Jepang.</p>
+                </div>
+        </section>
+        <!-- end document section -->
+
+        {{ if .Home.Highlights }}
+        <section id="highlights" class="document-highlights">
+                <div class="container">
+                        <div class="row text-center wow bounceIn" data-wow-delay="0.3s">
+                                <div class="col-md-12">
+                                        <h2>{{ .Header.Highlights }}</h2>
+                                        <hr>
+                                        <p class="lead">Ringkasan nilai tambah yang tersedia dalam dokumen resmi LPK Asta Karya.</p>
                                 </div>
-                                <div class="detail-card">
-                                        <h3 class="detail-card-title">Mapping Penempatan</h3>
-                                        <p>Data penempatan divisualisasikan melalui peta interaktif internal untuk memantau persebaran peserta di berbagai prefektur Jepang.</p>
+                        </div>
+                        <div class="row">
+                                {{ range .Home.Highlights }}
+                                <div class="col-md-4 col-sm-4 wow fadeInUp" data-wow-delay="0.3s">
+                                        <div class="highlight-card">
+                                                <div class="highlight-icon"><i class="fa {{ .Icon }}"></i></div>
+                                                <h4>{{ .Title }}</h4>
+                                                <p>{{ .Description }}</p>
+                                        </div>
                                 </div>
-                                <div class="detail-card">
-                                        <h3 class="detail-card-title">Infografis Data Siswa</h3>
-                                        <ul class="detail-list">
-                                                <li>Ringkasan jumlah siswa terkini berdasarkan angkatan.</li>
-                                                <li>Distribusi usia, jenis pekerjaan, dan gender peserta.</li>
-                                                <li>Dasbor statistik yang siap dikembangkan menjadi laporan publik.</li>
-                                        </ul>
+                                {{ end }}
+                        </div>
+                </div>
+        </section>
+        {{ end }}
+        <!-- end highlights section -->
+
+        {{ template "about" . }}
+
+        {{ template "program" . }}
+
+        <!-- start divider -->
+        <div class="divider">
+                <div class="overlay">
+                        <div class="container">
+                                <div class="row">
+                                        <div class="divider-des">
+                                                <h3 class="text-uppercase">LPK ASTA KARYA</h3>
+                                                <p>Lembaga Penyalur Kerja Asta Karya Indonesia</p>
+                                        </div>
                                 </div>
                         </div>
                 </div>
         </div>
-</section>
+        <!-- end divider -->
 
-<section id="training-center" class="section section-muted">
-        <div class="container">
-                <div class="section-heading text-center">
-                        <span class="section-eyebrow">Training Center</span>
-                        <h2 class="section-title">Lingkungan Belajar Modern di Kota Bandung</h2>
-                        <p class="section-subtitle">Fasilitas terintegrasi untuk mendukung kesiapan peserta sebelum berangkat ke Jepang.</p>
-                </div>
-                <div class="content-grid grid-2">
-                        <article class="content-card">
-                                <h3 class="content-card-title">Profil Fasilitas</h3>
-                                <p>LPK Asta Karya memiliki fasilitas Training Center yang berlokasi di Kota Bandung, Indonesia. Kota ini dikenal sebagai pusat pendidikan dengan iklim sejuk yang mendukung kenyamanan belajar.</p>
-                                <dl class="info-list compact">
-                                        <div><dt>Alamat</dt><dd>Jl. H. Ibrahim Adjie No.99, RT.03 RW.02, Kelurahan Cijawura, Kecamatan Buah Batu, Kota Bandung, Indonesia 40287</dd></div>
-                                        <div><dt>Kapasitas</dt><dd>100 peserta pelatihan</dd></div>
-                                </dl>
-                                <h4 class="content-card-subtitle">Fasilitas Utama</h4>
-                                <ul class="tag-list">
-                                        <li>Asrama</li>
-                                        <li>Dapur</li>
-                                        <li>Lapangan Olahraga</li>
-                                        <li>Laundry Room</li>
-                                        <li>Perpustakaan Kecil</li>
-                                        <li>Ruang Kesehatan</li>
-                                        <li>Multimedia</li>
-                                </ul>
-                        </article>
-                        <article class="content-card">
-                                <h3 class="content-card-title">Training Center in Japanese &amp; English</h3>
-                                <p><strong>日本語:</strong> バンドン市の研修センターは、静かな学習環境と快適な気候が特徴です。技術・言語・人格形成を総合的に育成する場として設計され、安全で質の高い事前研修を提供しています。</p>
-                                <p><strong>English:</strong> The Bandung Training Center delivers comprehensive preparation across technical, language, and character-building dimensions. It serves as the intensive staging ground before deployment to Japan, reflecting our commitment to a safe, result-oriented learning environment.</p>
-                                <h4 class="content-card-subtitle">Tim Pelatih</h4>
-                                <p>Pendiri LPK Asta Karya berpengalaman hidup dan studi di Jepang, memastikan proses rekrutmen pelatih mengedepankan kompetensi teknis, integritas, dan kemampuan memberi dampak positif bagi peserta.</p>
-                        </article>
-                </div>
-        </div>
-</section>
+        {{ template "training" . }}
 
-<section id="training-team" class="section">
-        <div class="container">
-                <div class="section-heading text-center">
-                        <span class="section-eyebrow">Tim &amp; Trainee</span>
-                        <h2 class="section-title">Pelatih Berpengalaman, Peserta Berdaya Saing</h2>
-                        <p class="section-subtitle">Pendampingan intensif dari para profesional dengan pemahaman mendalam tentang budaya Jepang.</p>
-                </div>
-                <div class="content-grid grid-2">
-                        <article class="detail-card">
-                                <h3 class="detail-card-title">Tentang Tim Pendidikan dan Pelatihan</h3>
-                                <p>Berbekal pengalaman langsung di Jepang, tim pelatih Asta Karya memiliki integritas dan kepedulian tinggi terhadap perkembangan peserta. Proses seleksi pelatih menitikberatkan pada penguasaan bahasa, kompetensi teknis, pengalaman internasional, serta kemampuan memberikan pengaruh positif.</p>
-                                <p>Komitmen ini memastikan setiap peserta dibekali keterampilan, mentalitas, dan kesiapan optimal sebelum menghadapi masa pemagangan di Jepang.</p>
-                        </article>
-                        <article class="detail-card">
-                                <h3 class="detail-card-title">Keunggulan Trainee Kami</h3>
-                                <ul class="detail-list">
-                                        <li><strong>Kemampuan Bahasa Jepang Unggul:</strong> Trainee menguasai Bahasa Jepang dengan standar tinggi untuk memastikan transfer ilmu yang efektif.</li>
-                                        <li><strong>Pemahaman Budaya dan Disiplin:</strong> Pembekalan realistis tentang kehidupan, etika kerja, dan tata krama masyarakat Jepang.</li>
-                                        <li><strong>Pendekatan Humanis:</strong> Kedekatan emosional dan pendampingan menyeluruh untuk menjaga kesehatan mental siswa selama pemagangan.</li>
-                                </ul>
-                        </article>
-                </div>
-        </div>
-</section>
-
-<section id="curriculum" class="section section-muted">
-        <div class="container">
-                <div class="section-heading text-center">
-                        <span class="section-eyebrow">Kurikulum</span>
-                        <h2 class="section-title">Rangkaian Pembelajaran Terstruktur</h2>
-                        <p class="section-subtitle">Menggabungkan penguasaan bahasa, pemahaman budaya, dan kompetensi teknis.</p>
-                </div>
-                <div class="content-grid grid-3">
-                        <article class="module-card">
-                                <h3 class="module-card-title">Materi Dasar / Foundation</h3>
-                                <ul>
-                                        <li>Pelatihan Bahasa Jepang intensif.</li>
-                                        <li>Pengenalan pola hidup dan budaya masyarakat Jepang.</li>
-                                        <li>Latihan fisik terstruktur.</li>
-                                        <li>Survival life in Japan untuk adaptasi awal.</li>
-                                </ul>
-                        </article>
-                        <article class="module-card">
-                                <h3 class="module-card-title">Materi Inti / Core</h3>
-                                <ul>
-                                        <li>Pemahaman budaya kerja Jepang dan sistem operasional perusahaan.</li>
-                                        <li>Penanaman kedisiplinan, tanggung jawab, dan ketepatan waktu.</li>
-                                        <li>Penguatan kerja sama tim dan komunikasi profesional.</li>
-                                </ul>
-                        </article>
-                        <article class="module-card">
-                                <h3 class="module-card-title">Materi Khusus / Specialized</h3>
-                                <ul>
-                                        <li>Pelatihan keterampilan teknis sesuai bidang penempatan.</li>
-                                        <li>Penyesuaian kurikulum dengan industri mitra.</li>
-                                        <li>Simulasi kerja untuk kesiapan di perusahaan Jepang.</li>
-                                </ul>
-                        </article>
-                </div>
-                <div class="content-grid grid-3 curriculum-more">
-                        <article class="module-card">
-                                <h3 class="module-card-title">研修カリキュラム（日本語）</h3>
-                                <p>座学と実践演習を組み合わせ、基礎科目・核心科目・専門科目の3本柱で構成。現地適応、日本の職場文化理解、業種別専門技術の習得を目指します。</p>
-                        </article>
-                        <article class="module-card">
-                                <h3 class="module-card-title">Program Advantages</h3>
-                                <ul>
-                                        <li><strong>Peningkatan Kualitas Hidup:</strong> Transfer keterampilan dan pengetahuan sebagai bekal karier jangka panjang.</li>
-                                        <li><strong>Kontribusi Industri:</strong> Mendukung peningkatan kontrol kualitas, kedisiplinan, dan efisiensi biaya.</li>
-                                        <li><strong>Relasi Internasional:</strong> Mempererat kerja sama Indonesia–Jepang dan mendorong semangat globalisasi.</li>
-                                </ul>
-                        </article>
-                        <article class="module-card">
-                                <h3 class="module-card-title">English Summary</h3>
-                                <p>Our curriculum equips participants with language proficiency, workplace ethics, and specialized technical mastery. The holistic approach empowers graduates to become change agents and positive contributors in the global arena.</p>
-                        </article>
-                </div>
-        </div>
-</section>
-
-<section id="recruitment" class="section">
-        <div class="container">
-                <div class="section-heading text-center">
-                        <span class="section-eyebrow">Seleksi Peserta</span>
-                        <h2 class="section-title">Tahapan Rekrutmen Pemagangan ke Jepang</h2>
-                        <p class="section-subtitle">Proses seleksi ketat untuk memastikan kesiapan peserta dari aspek teknis, mental, dan fisik.</p>
-                </div>
-                <div class="timeline">
-                        <div class="timeline-item">
-                                <span class="timeline-step">01</span>
-                                <div class="timeline-content">
-                                        <h3>Medical Check-Up</h3>
-                                        <p>Pemeriksaan kesehatan menyeluruh untuk memastikan kandidat dalam kondisi prima dan siap menghadapi lingkungan kerja industri Jepang.</p>
-                                </div>
-                        </div>
-                        <div class="timeline-item">
-                                <span class="timeline-step">02</span>
-                                <div class="timeline-content">
-                                        <h3>Ujian Bahasa Jepang</h3>
-                                        <p>Meliputi wawancara percakapan langsung tanpa penerjemah serta ujian tertulis setara JLPT N5 atau N4 untuk sektor keperawatan.</p>
-                                </div>
-                        </div>
-                        <div class="timeline-item">
-                                <span class="timeline-step">03</span>
-                                <div class="timeline-content">
-                                        <h3>Ujian Matematika Dasar</h3>
-                                        <p>Mengukur logika, ketelitian, dan kecepatan berhitung sebagai bekal kerja di industri dan manufaktur.</p>
-                                </div>
-                        </div>
-                        <div class="timeline-item">
-                                <span class="timeline-step">04</span>
-                                <div class="timeline-content">
-                                        <h3>IQ Test</h3>
-                                        <p>Menilai kemampuan intelektual dan adaptasi calon peserta terhadap sistem kerja di Jepang.</p>
-                                </div>
-                        </div>
-                        <div class="timeline-item">
-                                <span class="timeline-step">05</span>
-                                <div class="timeline-content">
-                                        <h3>Tes Fisik &amp; Kebugaran</h3>
-                                        <p>Memastikan daya tahan dan kebiasaan hidup sehat sehingga peserta siap menjalani kehidupan aktif selama pemagangan.</p>
+        <!-- start divider -->
+        <div class="divider" style="margin-top: 50px; margin-bottom: 50px;">
+                <div class="overlay">
+                        <div class="container">
+                                <div class="row">
+                                        <div class="divider-des">
+                                                <h3 class="text-uppercase">LPK ASTA KARYA</h3>
+                                                <p>Lembaga Penyalur Kerja Asta Karya Indonesia</p>
+                                        </div>
                                 </div>
                         </div>
                 </div>
-                <div class="recruitment-note">
-                        <div class="detail-card">
-                                <h3 class="detail-card-title">Kontribusi Program</h3>
-                                <ul class="detail-list">
-                                        <li><strong>生活の質向上:</strong> 技術と知識の習得が将来のキャリア形成に寄与します。</li>
-                                        <li><strong>産業界への貢献:</strong> 品質管理・規律・コスト効率の向上に繋がります。</li>
-                                        <li><strong>国際交流の強化:</strong> インドネシア–日本間の相互理解と協力を深化させます。</li>
-                                </ul>
-                                <p>Through this rigorous process, participants grow not only as professionals but also as positive contributors to society.</p>
-                        </div>
-                </div>
         </div>
-</section>
+        <!-- end divider -->
 
-<section id="resources" class="section section-muted">
-        <div class="container">
-                <div class="section-heading text-center">
-                        <span class="section-eyebrow">Sumber Daya &amp; Media</span>
-                        <h2 class="section-title">Materi Pendukung dan Kanal Informasi</h2>
-                        <p class="section-subtitle">Akses ke dokumen penting, galeri kegiatan, dan konten multimedia Asta Karya.</p>
-                </div>
-                <div class="content-grid grid-3">
-                        <article class="resource-card">
-                                <h3 class="resource-card-title">Sample Handbook Siswa</h3>
-                                <p>Dokumen panduan berisi tata tertib, agenda pelatihan, dan persiapan keberangkatan. Hubungi tim kami untuk mendapatkan versi terbaru.</p>
-                                <a class="resource-link" href="mailto:astakarya.adm@gmail.com"><i class="fa fa-envelope"></i> Permintaan Handbook</a>
-                        </article>
-                        <article class="resource-card">
-                                <h3 class="resource-card-title">Galeri</h3>
-                                <p>Kumpulan dokumentasi kegiatan pelatihan dan keberangkatan peserta. Jelajahi momen-momen penting dalam perjalanan kami.</p>
-                                <a class="resource-link" href="/galery"><i class="fa fa-picture-o"></i> Lihat Galeri</a>
-                        </article>
-                        <article class="resource-card">
-                                <h3 class="resource-card-title">YouTube Asta Karya</h3>
-                                <p>Video testimoni, highlight pelatihan, dan informasi rekrutmen terbaru tersedia di kanal resmi kami.</p>
-                                <a class="resource-link" href="https://www.youtube.com" target="_blank" rel="noopener"><i class="fa fa-youtube-play"></i> Kunjungi Kanal</a>
-                        </article>
-                </div>
-        </div>
-</section>
+        {{ template "media" . }}
 {{ end }}
