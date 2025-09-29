@@ -42,7 +42,7 @@
                 <div class="container">
                         <div class="row text-center wow bounceIn">
                                 <div class="col-md-12">
-                                        <h2>Kata Pengantar</h2>
+                                        <h2>{{ .Header.Foreword }}</h2>
                                         <hr>
                                         {{ if eq .Lang "jp" }}
                                         <p class="lead">LPKアスタ・カルヤ代表からのメッセージ。</p>
@@ -56,9 +56,18 @@
                         <div class="row align-items-center wow fadeInUp" data-wow-delay="0.3s">
                                 <div class="col-md-4">
                                         <div class="leader-card">
-                                                <img src="/static/images/team-img-1.png" class="img-responsive" alt="Foto Pimpinan LPK Asta Karya">
+                                                <div class="leader-photo-frame">
+                                                        <div class="leader-photo-glow"></div>
+                                                        <img src="/static/images/team-img-1.png" class="leader-photo" alt="Foto Pimpinan LPK Asta Karya">
+                                                </div>
                                                 <h4>Muhammad Arif Ramadhan</h4>
+                                                {{ if eq .Lang "jp" }}
+                                                <p>LPKアスタ・カルヤ代表取締役</p>
+                                                {{ else if eq .Lang "en" }}
+                                                <p>Director of LPK Asta Karya</p>
+                                                {{ else }}
                                                 <p>Direktur LPK Asta Karya</p>
+                                                {{ end }}
                                         </div>
                                 </div>
                                 <div class="col-md-8">
@@ -91,7 +100,7 @@
                 <div class="container">
                         <div class="row text-center wow bounceIn">
                                 <div class="col-md-12">
-                                        <h2>Profil Perusahaan</h2>
+                                        <h2>{{ .Header.Profile }}</h2>
                                         <hr>
                                         {{ if eq .Lang "jp" }}
                                         <p class="lead">LPKアスタ・カルヤに関する主要情報。</p>
@@ -155,7 +164,7 @@
                 <div class="container">
                         <div class="row text-center wow bounceIn">
                                 <div class="col-md-12">
-                                        <h2>Latar Belakang</h2>
+                                        <h2>{{ .Header.Background }}</h2>
                                         <hr>
                                         {{ if eq .Lang "jp" }}
                                         <p class="lead">LPKアスタ・カルヤ設立の歩みと目的。</p>
@@ -194,7 +203,7 @@
                 <div class="container">
                         <div class="row text-center wow bounceIn">
                                 <div class="col-md-12">
-                                        <h2>Visi &amp; Misi</h2>
+                                        <h2>{{ .Header.Vision }}</h2>
                                         <hr>
                                         {{ if eq .Lang "jp" }}
                                         <p class="lead">LPKアスタ・カルヤのビジョンとミッション。</p>
@@ -251,14 +260,26 @@
                 <div class="container">
                         <div class="row text-center wow bounceIn">
                                 <div class="col-md-12">
-                                        <h2>Struktur Organisasi</h2>
+                                        <h2>{{ .Header.Structure }}</h2>
                                         <hr>
+                                        {{ if eq .Lang "jp" }}
+                                        <p class="lead">部門横断の連携により、すべての研修生がきめ細かなサポートを受けられます。</p>
+                                        {{ else if eq .Lang "en" }}
+                                        <p class="lead">Cross-division collaboration ensures every trainee receives comprehensive mentoring.</p>
+                                        {{ else }}
                                         <p class="lead">Kolaborasi lintas divisi memastikan setiap peserta mendapat pendampingan menyeluruh.</p>
+                                        {{ end }}
                                 </div>
                         </div>
                         <div class="row wow fadeInUp" data-wow-delay="0.3s">
                                 <div class="col-md-12">
+                                        {{ if eq .Lang "jp" }}
+                                        <p align="justify" class="section-intro">LPKアスタ・カルヤのチームは、有資格の講師、日本での経験を持つ卒業生、カウンセラー、事務専門家で構成され、募集から教育、派遣まで一体となって支援します。</p>
+                                        {{ else if eq .Lang "en" }}
+                                        <p align="justify" class="section-intro">The LPK Asta Karya team brings together certified instructors, Japanese alumni, counsellors, and administrative specialists who collaborate seamlessly from recruitment through placement.</p>
+                                        {{ else }}
                                         <p align="justify" class="section-intro">Tim LPK Asta Karya terdiri dari instruktur bersertifikasi, alumni Jepang, konselor, serta tenaga ahli administratif yang bekerja terpadu dari tahap rekrutmen, pendidikan, hingga penempatan.</p>
+                                        {{ end }}
                                         <img src="/static/images/structure_organization.png" class="img-responsive" alt="Struktur organisasi LPK Asta Karya">
                                 </div>
                         </div>
@@ -271,7 +292,7 @@
                 <div class="container">
                         <div class="row text-center wow bounceIn">
                                 <div class="col-md-12">
-                                        <h2>Laporan Pengiriman Siswa</h2>
+                                        <h2>{{ .Header.Report }}</h2>
                                         <hr>
                                         {{ if eq .Lang "jp" }}
                                         <p class="lead">派遣実績、配置マップ、研修生プロフィールをまとめたダッシュボード。</p>
@@ -318,23 +339,53 @@
                         <div class="row wow fadeInUp" data-wow-delay="0.3s">
                                 <div class="col-md-4 col-sm-6">
                                         <div class="report-card">
+                                                {{ if eq .Lang "jp" }}
+                                                <h4>配置マッピング</h4>
+                                                <p align="justify">インタラクティブマップが研修生の配置を都道府県別に表示し、パートナーやご家族への透明性を高めます。</p>
+                                                <p class="report-note">* 詳細データは公式ドキュメントに記載されています。</p>
+                                                {{ else if eq .Lang "en" }}
+                                                <h4>Placement Mapping</h4>
+                                                <p align="justify">An interactive map showcases trainee placements across Japanese prefectures, offering transparency for partners and families.</p>
+                                                <p class="report-note">* Detailed numbers are included in the official company document.</p>
+                                                {{ else }}
                                                 <h4>Mapping Penempatan</h4>
                                                 <p align="justify">Peta interaktif menampilkan persebaran peserta di berbagai prefektur Jepang sebagai bentuk transparansi terhadap mitra dan keluarga.</p>
                                                 <p class="report-note">* Data rinci terlampir dalam dokumen resmi perusahaan.</p>
+                                                {{ end }}
                                         </div>
                                 </div>
                                 <div class="col-md-4 col-sm-6">
                                         <div class="report-card">
+                                                {{ if eq .Lang "jp" }}
+                                                <h4>研修生インフォグラフィック</h4>
+                                                <p align="justify">各期の渡航統計をわかりやすいインフォグラフィックで可視化し、機関の成果を把握します。</p>
+                                                <p class="report-note">* ビジュアル資料はデジタル付録でご確認いただけます。</p>
+                                                {{ else if eq .Lang "en" }}
+                                                <h4>Trainee Volume Infographic</h4>
+                                                <p align="justify">Departure statistics for each cohort are visualized through easy-to-read infographics to monitor institutional performance.</p>
+                                                <p class="report-note">* Visual infographics are provided in the digital annex.</p>
+                                                {{ else }}
                                                 <h4>Infografis Jumlah Siswa</h4>
                                                 <p align="justify">Statistik keberangkatan setiap angkatan disusun dalam infografis yang mudah dipahami untuk memantau perkembangan kinerja lembaga.</p>
                                                 <p class="report-note">* Infografis visual tersedia dalam lampiran digital.</p>
+                                                {{ end }}
                                         </div>
                                 </div>
                                 <div class="col-md-4 col-sm-6">
                                         <div class="report-card">
+                                                {{ if eq .Lang "jp" }}
+                                                <h4>研修生プロフィール</h4>
+                                                <p align="justify">参加者データを年齢・職種・性別で分析し、バランスの取れた派遣を実現します。</p>
+                                                <p class="report-note">* 詳細レポートは公式ドキュメントで閲覧できます。</p>
+                                                {{ else if eq .Lang "en" }}
+                                                <h4>Trainee Profiles</h4>
+                                                <p align="justify">Participant data is analyzed by age, job type, and gender to ensure proportional and inclusive placements.</p>
+                                                <p class="report-note">* The complete report can be accessed through the official document.</p>
+                                                {{ else }}
                                                 <h4>Profil Siswa</h4>
                                                 <p align="justify">Data peserta dianalisis berdasarkan usia, jenis pekerjaan, dan gender guna memastikan penempatan yang proporsional dan inklusif.</p>
                                                 <p class="report-note">* Laporan lengkap dapat diakses melalui dokumen perusahaan.</p>
+                                                {{ end }}
                                         </div>
                                 </div>
                         </div>
@@ -347,19 +398,43 @@
                 <div class="container">
                         <div class="row text-center wow bounceIn">
                                 <div class="col-md-12">
-                                        <h2>Training Center</h2>
+                                        <h2>{{ .Header.Training }}</h2>
                                         <hr>
+                                        {{ if eq .Lang "jp" }}
+                                        <p class="lead">バンドンにある統合施設が、技術・語学・人格形成の学びを支えます。</p>
+                                        {{ else if eq .Lang "en" }}
+                                        <p class="lead">An integrated facility in Bandung that supports technical, language, and character development.</p>
+                                        {{ else }}
                                         <p class="lead">Fasilitas terintegrasi di Bandung yang mendukung pembelajaran teknis, bahasa, dan karakter.</p>
+                                        {{ end }}
                                 </div>
                         </div>
                         <div class="row wow fadeInUp" data-wow-delay="0.3s">
                                 <div class="col-md-6">
+                                        {{ if eq .Lang "jp" }}
+                                        <p align="justify">LPKアスタ・カルヤは教育都市バンドンにトレーニングセンターを構え、涼しい気候と学習文化の中で日本渡航前の集中研修を実施しています。</p>
+                                        {{ else if eq .Lang "en" }}
+                                        <p align="justify">LPK Asta Karya operates a training center in Bandung—a student city with a cool climate and strong learning culture—providing intensive preparation before participants depart for Japan.</p>
+                                        {{ else }}
                                         <p align="justify">LPK Asta Karya mengoperasikan Training Center di Kota Bandung—kota pendidikan dengan iklim sejuk dan budaya belajar kuat. Fasilitas ini menjadi pusat pembekalan intensif sebelum peserta diberangkatkan ke Jepang.</p>
+                                        {{ end }}
                                         <ul class="facility-list">
+                                                {{ if eq .Lang "jp" }}
+                                                <li>最大100名を収容できる研修キャパシティ。</li>
+                                                <li>講師が24時間常駐する快適な寮。</li>
+                                                <li>健康的な生活習慣を育むキッチン、食堂、スポーツエリア。</li>
+                                                <li>ランドリールーム、小さな図書室、ヘルスケアルーム、マルチメディアスペース。</li>
+                                                {{ else if eq .Lang "en" }}
+                                                <li>Training capacity for up to 100 participants.</li>
+                                                <li>Comfortable dormitories with 24-hour instructor supervision.</li>
+                                                <li>Kitchen, dining hall, and sports area to instill healthy habits.</li>
+                                                <li>Laundry facilities, a mini library, clinic room, and multimedia space.</li>
+                                                {{ else }}
                                                 <li>Kapasitas pelatihan hingga 100 peserta.</li>
                                                 <li>Asrama nyaman dengan pengawasan instruktur 24 jam.</li>
                                                 <li>Dapur, ruang makan, dan area olahraga untuk membangun kebiasaan hidup sehat.</li>
                                                 <li>Laundry room, perpustakaan kecil, ruang kesehatan, dan ruang multimedia.</li>
+                                                {{ end }}
                                         </ul>
                                 </div>
                                 <div class="col-md-6">
@@ -375,14 +450,26 @@
                 <div class="container">
                         <div class="row text-center wow bounceIn">
                                 <div class="col-md-12">
-                                        <h2>Keunggulan Tenaga Pengajar</h2>
+                                        <h2>{{ .Header.Educators }}</h2>
                                         <hr>
+                                        {{ if eq .Lang "jp" }}
+                                        <p class="lead">日本での学習・就労経験を持つ指導チームが在籍しています。</p>
+                                        {{ else if eq .Lang "en" }}
+                                        <p class="lead">A seasoned coaching team with firsthand study and work experience in Japan.</p>
+                                        {{ else }}
                                         <p class="lead">Tim pelatih berpengalaman dengan latar belakang studi dan kerja langsung di Jepang.</p>
+                                        {{ end }}
                                 </div>
                         </div>
                         <div class="row wow fadeInUp" data-wow-delay="0.3s">
                                 <div class="col-md-12">
+                                        {{ if eq .Lang "jp" }}
+                                        <p align="justify">LPKアスタ・カルヤの創設者は日本での生活と学習経験を持ち、日本の文化や労働倫理、生活様式を深く理解しています。講師陣は技術力、日本語能力、誠実さ、国際経験を基準に厳選され、研修生の成長に貢献します。</p>
+                                        {{ else if eq .Lang "en" }}
+                                        <p align="justify">The founder of LPK Asta Karya lived and studied in Japan, gaining a deep understanding of the nation’s culture, work ethic, and daily life. Trainers are carefully selected for their technical expertise, language proficiency, integrity, and international experience so they can meaningfully support every trainee.</p>
+                                        {{ else }}
                                         <p align="justify">Pendiri LPK Asta Karya memiliki pengalaman hidup dan studi langsung di Jepang sehingga memahami budaya, etos kerja, dan dinamika kehidupan masyarakat Jepang secara mendalam. Proses seleksi pelatih dilakukan ketat dengan mempertimbangkan kompetensi teknis, kemampuan bahasa, integritas, serta pengalaman internasional. Setiap instruktur diharapkan mampu memberikan dampak positif bagi perkembangan pribadi dan profesional siswa.</p>
+                                        {{ end }}
                                 </div>
                         </div>
                 </div>
@@ -394,17 +481,33 @@
                 <div class="container">
                         <div class="row text-center wow bounceIn">
                                 <div class="col-md-12">
-                                        <h2>Keunggulan Peserta</h2>
+                                        <h2>{{ .Header.Trainees }}</h2>
                                         <hr>
+                                        {{ if eq .Lang "jp" }}
+                                        <p class="lead">LPKアスタ・カルヤの研修生がインターンシップを成功させるための強み。</p>
+                                        {{ else if eq .Lang "en" }}
+                                        <p class="lead">Key strengths that help LPK Asta Karya trainees succeed in their internships.</p>
+                                        {{ else }}
                                         <p class="lead">Nilai tambah trainee LPK Asta Karya dalam mendukung keberhasilan pemagangan.</p>
+                                        {{ end }}
                                 </div>
                         </div>
                         <div class="row wow fadeInUp" data-wow-delay="0.3s">
                                 <div class="col-md-12">
                                         <ul class="advantage-list">
+                                                {{ if eq .Lang "jp" }}
+                                                <li><strong>優れた日本語運用能力:</strong> 標準化された語学資格を備え、指導やコミュニケーションを円滑に行います。</li>
+                                                <li><strong>日本文化と規律の理解:</strong> 現地での体験が職場の倫理や生活習慣をリアルに学ばせます。</li>
+                                                <li><strong>人間中心のアプローチ:</strong> 情緒的な寄り添いで安心して課題を共有でき、メンタル面の課題を早期に察知します。</li>
+                                                {{ else if eq .Lang "en" }}
+                                                <li><strong>Exceptional Japanese Language Skills:</strong> Trainees hold standardized language qualifications that enable effective teaching and communication.</li>
+                                                <li><strong>Understanding of Japanese Culture &amp; Discipline:</strong> First-hand experiences provide realistic insight into workplace ethics and daily life in Japan.</li>
+                                                <li><strong>Human-Centred Approach:</strong> Close emotional support creates a safe space to discuss challenges so mental health concerns can be anticipated early.</li>
+                                                {{ else }}
                                                 <li><strong>Kemampuan Bahasa Jepang Unggul:</strong> Trainee memiliki kualifikasi bahasa terstandar sehingga mampu mengajar dan berkomunikasi efektif.</li>
                                                 <li><strong>Pemahaman Budaya &amp; Disiplin Jepang:</strong> Pengalaman langsung memberikan bekal realistis mengenai etika kerja dan kehidupan sehari-hari di Jepang.</li>
                                                 <li><strong>Pendekatan Humanis:</strong> Kedekatan emosional dengan siswa menciptakan ruang aman untuk berbagi tantangan sehingga isu mental dapat diantisipasi lebih dini.</li>
+                                                {{ end }}
                                         </ul>
                                 </div>
                         </div>
@@ -417,14 +520,26 @@
                 <div class="container">
                         <div class="row text-center wow bounceIn">
                                 <div class="col-md-12">
-                                        <h2>Tentang Tim Pendidikan &amp; Pelatihan</h2>
+                                        <h2>{{ .Header.Team }}</h2>
                                         <hr>
+                                        {{ if eq .Lang "jp" }}
+                                        <p class="lead">分野横断の連携で、研修生の総合的な準備を支援します。</p>
+                                        {{ else if eq .Lang "en" }}
+                                        <p class="lead">Cross-disciplinary collaboration ensures trainees are fully prepared.</p>
+                                        {{ else }}
                                         <p class="lead">Kolaborasi lintas disiplin demi memastikan kesiapan menyeluruh peserta.</p>
+                                        {{ end }}
                                 </div>
                         </div>
                         <div class="row wow fadeInUp" data-wow-delay="0.3s">
                                 <div class="col-md-12">
+                                        {{ if eq .Lang "jp" }}
+                                        <p align="justify">経験豊かな指導陣の支えにより、LPKアスタ・カルヤは研修生に日本での実習に必要なスキル、マインドセット、準備性を身につけさせます。学習支援から人格形成、メンタルケアまで伴走し、帰国後はより成熟した人材として活躍できるよう導きます。</p>
+                                        {{ else if eq .Lang "en" }}
+                                        <p align="justify">With experienced coaches, LPK Asta Karya equips participants with the skills, mindset, and readiness needed to face internship challenges in Japan. Support spans academics, character building, and psychological guidance so trainees return more mature and future-ready.</p>
+                                        {{ else }}
                                         <p align="justify">Dengan dukungan pelatih berkualitas dan berpengalaman, LPK Asta Karya bertekad membekali peserta dengan keterampilan, mentalitas, serta kesiapan optimal menghadapi tantangan selama pemagangan di Jepang. Pendampingan meliputi aspek akademik, pembentukan karakter, hingga dukungan psikologis sehingga peserta kembali sebagai pribadi yang lebih matang dan siap membangun masa depan.</p>
+                                        {{ end }}
                                 </div>
                         </div>
                 </div>
@@ -436,40 +551,86 @@
                 <div class="container">
                         <div class="row text-center wow bounceIn">
                                 <div class="col-md-12">
-                                        <h2>Kurikulum</h2>
+                                        <h2>{{ .Header.Curriculum }}</h2>
                                         <hr>
+                                        {{ if eq .Lang "jp" }}
+                                        <p class="lead">技術・文化・人格を統合した総合的な研修アプローチ。</p>
+                                        {{ else if eq .Lang "en" }}
+                                        <p class="lead">A comprehensive training approach blending technical, cultural, and character development.</p>
+                                        {{ else }}
                                         <p class="lead">Pendekatan pelatihan komprehensif yang memadukan kompetensi teknis, budaya, dan karakter.</p>
+                                        {{ end }}
                                 </div>
                         </div>
                         <div class="row wow fadeInUp" data-wow-delay="0.3s">
                                 <div class="col-md-4 col-sm-6">
                                         <div class="curriculum-card">
+                                                {{ if eq .Lang "jp" }}
+                                                <h4>基礎モジュール</h4>
+                                                <p align="justify">日本語トレーニング、日本の生活様式の紹介、体力トレーニング、サバイバル生活ガイダンスで初期適応を支援します。</p>
+                                                {{ else if eq .Lang "en" }}
+                                                <h4>Foundation Module</h4>
+                                                <p align="justify">Japanese language training, lifestyle orientation, physical conditioning, and survival briefings to support early adaptation in Japan.</p>
+                                                {{ else }}
                                                 <h4>Materi Dasar</h4>
                                                 <p align="justify">Pelatihan bahasa Jepang, pengenalan pola hidup masyarakat Jepang, latihan fisik, serta pembekalan survival life in Japan untuk mendukung adaptasi awal peserta.</p>
+                                                {{ end }}
                                         </div>
                                 </div>
                                 <div class="col-md-4 col-sm-6">
                                         <div class="curriculum-card">
+                                                {{ if eq .Lang "jp" }}
+                                                <h4>中核モジュール</h4>
+                                                <p align="justify">職場文化や日本の働き方を学び、規律・責任感・時間厳守・チームワークを養います。</p>
+                                                {{ else if eq .Lang "en" }}
+                                                <h4>Core Module</h4>
+                                                <p align="justify">Builds understanding of Japanese workplace culture and systems while instilling discipline, responsibility, punctuality, and teamwork.</p>
+                                                {{ else }}
                                                 <h4>Materi Inti</h4>
                                                 <p align="justify">Pembentukan pemahaman budaya kerja, sistem kerja Jepang, serta penanaman nilai kedisiplinan, tanggung jawab, ketepatan waktu, dan kerja sama tim.</p>
+                                                {{ end }}
                                         </div>
                                 </div>
                                 <div class="col-md-4 col-sm-6">
                                         <div class="curriculum-card">
+                                                {{ if eq .Lang "jp" }}
+                                                <h4>専門モジュール</h4>
+                                                <p align="justify">派遣先と提携企業のニーズに沿った専門技術研修を行います。</p>
+                                                {{ else if eq .Lang "en" }}
+                                                <h4>Specialization Module</h4>
+                                                <p align="justify">Technical training tailored to each placement field and the requirements of partner companies.</p>
+                                                {{ else }}
                                                 <h4>Materi Khusus</h4>
                                                 <p align="justify">Pelatihan keterampilan teknis sesuai bidang penempatan masing-masing peserta berdasarkan kebutuhan perusahaan mitra.</p>
+                                                {{ end }}
                                         </div>
                                 </div>
                         </div>
                         <div class="row wow fadeInUp" data-wow-delay="0.5s">
                                 <div class="col-md-12">
                                         <div class="program-advantages">
+                                                {{ if eq .Lang "jp" }}
+                                                <h4>プログラムの強み</h4>
+                                                <ul>
+                                                        <li>実践的スキルの習得で生活の質を向上。</li>
+                                                        <li>提携産業の品質向上に貢献。</li>
+                                                        <li>インドネシアと日本の関係、人材のグローバル化を強化。</li>
+                                                </ul>
+                                                {{ else if eq .Lang "en" }}
+                                                <h4>Program Advantages</h4>
+                                                <ul>
+                                                        <li>Improves quality of life through transferable, hands-on skills.</li>
+                                                        <li>Contributes to raising standards across partner industries.</li>
+                                                        <li>Strengthens Indonesia–Japan relations and global workforce readiness.</li>
+                                                </ul>
+                                                {{ else }}
                                                 <h4>Keunggulan Program</h4>
                                                 <ul>
                                                         <li>Peningkatan kualitas hidup melalui transfer keterampilan yang aplikatif.</li>
                                                         <li>Kontribusi terhadap peningkatan kualitas industri mitra.</li>
                                                         <li>Penguatan relasi bilateral Indonesia–Jepang dan semangat globalisasi tenaga kerja.</li>
                                                 </ul>
+                                                {{ end }}
                                         </div>
                                 </div>
                         </div>
@@ -482,16 +643,30 @@
                 <div class="container">
                         <div class="row text-center wow bounceIn">
                                 <div class="col-md-12">
-                                        <h2>Sample Handbook Siswa</h2>
+                                        <h2>{{ .Header.Handbook }}</h2>
                                         <hr>
+                                        {{ if eq .Lang "jp" }}
+                                        <p class="lead">寮生活や規律、日常スタンダードをまとめたハンドブックを提供しています。</p>
+                                        {{ else if eq .Lang "en" }}
+                                        <p class="lead">A handbook detailing dorm life, rules, and discipline standards is available for trainees.</p>
+                                        {{ else }}
                                         <p class="lead">Panduan kehidupan asrama, tata tertib, dan standar kedisiplinan tersedia dalam bentuk handbook.</p>
+                                        {{ end }}
                                 </div>
                         </div>
                         <div class="row wow fadeInUp" data-wow-delay="0.3s">
                                 <div class="col-md-8 col-md-offset-2">
                                         <div class="handbook-card">
+                                                {{ if eq .Lang "jp" }}
+                                                <p align="justify">学生用ハンドブックには寮の規則、日課、安全手順、日本の職場でのコミュニケーションマナーが網羅されています。完全版はLPKアスタ・カルヤの事務チームまたはオリエンテーション時に入手できます。</p>
+                                                <p class="report-note">* デジタル版は公式資料として登録参加者に配布されます。</p>
+                                                {{ else if eq .Lang "en" }}
+                                                <p align="justify">The sample student handbook covers dormitory rules, daily schedules, safety procedures, and communication etiquette for Japanese workplaces. The full document is available through the LPK Asta Karya administration team or during participant orientation.</p>
+                                                <p class="report-note">* A digital edition is provided as an official attachment for registered trainees.</p>
+                                                {{ else }}
                                                 <p align="justify">Sample handbook siswa memuat informasi lengkap mengenai aturan asrama, jadwal harian, prosedur keselamatan, hingga etika berkomunikasi di lingkungan kerja Jepang. Dokumen lengkap dapat diperoleh melalui tim administrasi LPK Asta Karya atau saat sesi orientasi peserta.</p>
                                                 <p class="report-note">* Versi digital handbook tersedia sebagai lampiran resmi dan dibagikan kepada peserta terdaftar.</p>
+                                                {{ end }}
                                         </div>
                                 </div>
                         </div>
@@ -504,21 +679,47 @@
                 <div class="container">
                         <div class="row text-center wow bounceIn">
                                 <div class="col-md-12">
-                                        <h2>Tentang Perekrutan</h2>
+                                        <h2>{{ .Header.Recruitment }}</h2>
                                         <hr>
+                                        {{ if eq .Lang "jp" }}
+                                        <p class="lead">最適な研修候補者を選抜するための徹底した選考プロセスです。</p>
+                                        {{ else if eq .Lang "en" }}
+                                        <p class="lead">A thorough selection process to recruit the best internship candidates.</p>
+                                        {{ else }}
                                         <p class="lead">Tahapan seleksi menyeluruh untuk menjaring calon peserta pemagangan terbaik.</p>
+                                        {{ end }}
                                 </div>
                         </div>
                         <div class="row wow fadeInUp" data-wow-delay="0.3s">
                                 <div class="col-md-12">
                                         <ol class="selection-steps">
+                                                {{ if eq .Lang "jp" }}
+                                                <li><strong>健康診断 (MCU):</strong> 候補者が業務に支障のない健康状態であることを確認します。</li>
+                                                <li><strong>日本語試験:</strong> 通訳なしの基礎会話面接と、介護分野向けN5/N4相当の筆記試験を実施します。</li>
+                                                <li><strong>基礎数学試験:</strong> 論理性・正確性・計算力を測定し、精密産業での業務に備えます。</li>
+                                                <li><strong>知能検査（IQテスト）:</strong> 知的能力と日本の就業システムへの適応力を評価します。</li>
+                                                <li><strong>体力・フィットネステスト:</strong> 持久力、筋力、健康的な生活習慣を確認します。</li>
+                                                {{ else if eq .Lang "en" }}
+                                                <li><strong>Medical Check-Up (MCU):</strong> Ensures candidates are in prime condition and free from health issues that may hinder work.</li>
+                                                <li><strong>Japanese Language Test:</strong> Includes a basic conversation interview without interpreters and written exams equivalent to JLPT N5 or N4 for nursing.</li>
+                                                <li><strong>Basic Mathematics Test:</strong> Measures logic, accuracy, and numeracy to prepare candidates for precision industries.</li>
+                                                <li><strong>Intelligence Test (IQ):</strong> Assesses intellectual capability and adaptability to Japanese work systems.</li>
+                                                <li><strong>Physical &amp; Fitness Test:</strong> Evaluates endurance, muscle strength, and healthy living habits.</li>
+                                                {{ else }}
                                                 <li><strong>Pemeriksaan Kesehatan (MCU):</strong> Memastikan calon peserta dalam kondisi prima dan bebas penyakit yang menghambat aktivitas kerja.</li>
                                                 <li><strong>Ujian Bahasa Jepang:</strong> Meliputi wawancara percakapan dasar tanpa penerjemah serta ujian tertulis setara JLPT N5 atau N4 untuk sektor keperawatan.</li>
                                                 <li><strong>Ujian Matematika Dasar:</strong> Mengukur logika, ketelitian, dan kemampuan berhitung sebagai bekal bekerja di industri presisi.</li>
                                                 <li><strong>Ujian Kecerdasan (IQ Test):</strong> Menilai kemampuan intelektual dan adaptasi terhadap sistem kerja Jepang.</li>
                                                 <li><strong>Tes Fisik &amp; Kebugaran:</strong> Mengevaluasi daya tahan tubuh, kekuatan otot, dan kebiasaan hidup sehat peserta.</li>
+                                                {{ end }}
                                         </ol>
+                                        {{ if eq .Lang "jp" }}
+                                        <p align="justify">この選考プロセスにより、参加者は学力・精神面・体力のすべてで十分に準備され、日本で活躍し祖国に貢献できる人材へと成長します。</p>
+                                        {{ else if eq .Lang "en" }}
+                                        <p align="justify">This selection process ensures participants are academically, mentally, and physically prepared to represent the nation and build a brighter future in Japan.</p>
+                                        {{ else }}
                                         <p align="justify">Proses seleksi ini memastikan peserta siap secara akademik, mental, maupun fisik sehingga mampu membawa nama baik bangsa sekaligus meraih masa depan yang lebih cerah di Jepang.</p>
+                                        {{ end }}
                                 </div>
                         </div>
                 </div>
