@@ -1,10 +1,17 @@
 {
     "title": "LPK Asta Karya - 日本での生活、仕事、学習",
     "home": "ホーム",
-    "about": "私たちについて",
-    "program": "プログラム",
-    "training": "トレーニング",
-    "media": "メディア",
-    "galery": "メディ",
+    "foreword": "ごあいさつ",
+    "profile": "会社概要",
+    "background": "設立の経緯",
+    "visionMission": "ビジョンと使命",
+    "organization": "組織図",
+    "reports": "研修生レポート",
+    "trainingCenter": "研修センター",
+    "trainingTeam": "講師・研修チーム",
+    "curriculum": "カリキュラム",
+    "recruitment": "選考プロセス",
+    "gallery": "ギャラリー",
+    "youtube": "YouTube",
     "change_language": "Bahasa Indonesia"
 }

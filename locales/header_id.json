@@ -1,10 +1,17 @@
 {
     "title": "LPK Asta Karya - Live Work and Learn in Japan",
     "home": "Beranda",
-    "about": "Ini Kami",
-    "program": "Program",
-    "training": "Pelatihan",
-    "media": "Media",
-    "galery": "Galery",
+    "foreword": "Kata Pengantar",
+    "profile": "Profil Perusahaan",
+    "background": "Latar Belakang",
+    "visionMission": "Visi & Misi",
+    "organization": "Struktur",
+    "reports": "Laporan Siswa",
+    "trainingCenter": "Training Center",
+    "trainingTeam": "Tim Pelatihan",
+    "curriculum": "Kurikulum",
+    "recruitment": "Seleksi",
+    "gallery": "Galeri",
+    "youtube": "YouTube",
     "change_language": "日本語"
 }
