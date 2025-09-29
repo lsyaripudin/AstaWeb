@@ -14,16 +14,26 @@ import (
 )
 
 type Header struct {
-	Title      string `json:"title"`
-	Home       string `json:"home"`
-	About      string `json:"about"`
-	Program    string `json:"program"`
-	Training   string `json:"training"`
-	Media      string `json:"media"`
-	Highlights string `json:"highlights"`
-	Document   string `json:"document"`
-	Galery     string `json:"galery"`
-	ChangeLang string `json:"change_language"`
+	Title       string `json:"title"`
+	Home        string `json:"home"`
+	Foreword    string `json:"foreword"`
+	Profile     string `json:"profile"`
+	Background  string `json:"background"`
+	Vision      string `json:"vision_mission"`
+	Structure   string `json:"organization"`
+	Report      string `json:"report"`
+	Training    string `json:"training_center"`
+	Educators   string `json:"educators"`
+	Trainees    string `json:"trainee_strengths"`
+	Team        string `json:"team"`
+	Curriculum  string `json:"curriculum"`
+	Handbook    string `json:"handbook"`
+	Recruitment string `json:"recruitment"`
+	Media       string `json:"media"`
+	Highlights  string `json:"highlights"`
+	Galery      string `json:"galery"`
+	Youtube     string `json:"youtube"`
+	ChangeLang  string `json:"change_language"`
 }
 
 func loadJSONFile(filePath string, target interface{}) error {

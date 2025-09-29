@@ -108,6 +108,104 @@
     color: #666666;
 }
 
+.content-section {
+    padding: 80px 0;
+    background: #ffffff;
+}
+
+.content-section.alt-bg {
+    background: #f7f9fc;
+}
+
+.content-section .lead {
+    max-width: 760px;
+    margin: 0 auto 30px auto;
+}
+
+.leader-card {
+    text-align: center;
+    background: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 20px 30px rgba(0, 0, 0, 0.08);
+    padding: 24px 20px;
+}
+
+.leader-card img {
+    margin: 0 auto 20px auto;
+}
+
+.multilingual-card,
+.profile-card,
+.vision-card,
+.report-card,
+.handbook-card {
+    background: #ffffff;
+    border-radius: 12px;
+    padding: 24px 22px;
+    margin-bottom: 30px;
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.08);
+    height: 100%;
+}
+
+.profile-list,
+.facility-list,
+.advantage-list,
+.program-advantages ul,
+.selection-steps {
+    margin: 0;
+    padding-left: 18px;
+    line-height: 1.8;
+}
+
+.profile-list li,
+.advantage-list li,
+.facility-list li,
+.program-advantages li,
+.selection-steps li {
+    margin-bottom: 8px;
+}
+
+.curriculum-card {
+    background: #ffffff;
+    border-radius: 12px;
+    padding: 24px 22px;
+    margin-bottom: 30px;
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.08);
+    height: 100%;
+}
+
+.program-advantages {
+    background: #ffffff;
+    border-radius: 12px;
+    padding: 30px 28px;
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.08);
+}
+
+.report-note {
+    font-size: 13px;
+    color: #666666;
+    margin-top: 10px;
+}
+
+.section-intro {
+    font-size: 16px;
+    margin-bottom: 30px;
+}
+
+@media (max-width: 991px) {
+    .leader-card {
+        margin-bottom: 30px;
+    }
+
+    .profile-card,
+    .multilingual-card,
+    .vision-card,
+    .report-card,
+    .curriculum-card {
+        height: auto;
+    }
+}
+
 @media (max-width: 767px) {
     .document-section {
         padding: 60px 0;
