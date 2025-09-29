@@ -44,7 +44,13 @@
                                 <div class="col-md-12">
                                         <h2>Kata Pengantar</h2>
                                         <hr>
-                                        <p class="lead">Sambutan resmi pimpinan LPK Asta Karya dalam tiga bahasa sebagai wujud komitmen global.</p>
+                                        {{ if eq .Lang "jp" }}
+                                        <p class="lead">LPKアスタ・カルヤ代表からのメッセージ。</p>
+                                        {{ else if eq .Lang "en" }}
+                                        <p class="lead">A formal greeting from the leadership of LPK Asta Karya.</p>
+                                        {{ else }}
+                                        <p class="lead">Sambutan resmi pimpinan LPK Asta Karya.</p>
+                                        {{ end }}
                                 </div>
                         </div>
                         <div class="row align-items-center wow fadeInUp" data-wow-delay="0.3s">
@@ -56,31 +62,23 @@
                                         </div>
                                 </div>
                                 <div class="col-md-8">
-                                        <div class="row">
-                                                <div class="col-sm-4">
-                                                        <div class="multilingual-card">
-                                                                <h5>Bahasa Indonesia</h5>
-                                                                <p>Puji dan syukur kami panjatkan ke hadirat Tuhan Yang Maha Esa, karena atas rahmat dan karunia-Nya, kami dapat menyusun dan menghadirkan company profile Lembaga Pelatihan Kerja (LPK) Asta Karya ke Jepang ini. Lembaga kami berkomitmen untuk memberikan program pelatihan yang berkualitas dan sesuai dengan standar kebutuhan pasar kerja di Jepang, sehingga para peserta pelatihan dapat memiliki keterampilan dan kompetensi yang memadai untuk bersaing secara global.</p>
-                                                                <p>Program pelatihan ini dirancang dengan tujuan memberikan bekal keahlian praktis dan wawasan budaya yang mendalam tentang Jepang. Kami percaya kesempatan untuk bekerja dan berkarir di Jepang dapat diwujudkan secara optimal melalui persiapan menyeluruh yang kami sediakan.</p>
-                                                                <p>Kami mengucapkan terima kasih kepada semua pihak yang telah mendukung terlaksananya program ini. Semoga program pelatihan ini membawa manfaat besar dan menjadi langkah awal yang baik dalam meraih kesuksesan di dunia kerja internasional.</p>
-                                                        </div>
-                                                </div>
-                                                <div class="col-sm-4">
-                                                        <div class="multilingual-card">
-                                                                <h5>日本語</h5>
-                                                                <p>まず初めに、LPK ASTA KARYA職業訓練機関の企業紹介資料を皆様にお届けできることを、心より光栄に存じます。これはひとえに神のご加護と関係者の皆様のご支援の賜物であると、深く感謝申し上げます。</p>
-                                                                <p>ASTA KARYA は、日本の労働市場のニーズに応じた質の高い訓練を提供することを使命とし、参加者が国際社会でも通用するスキルと能力を身につけられるよう努めております。</p>
-                                                                <p>訓練生の皆様には、この貴重な機会を最大限に活かし、より明るい未来への一歩を踏み出していただきたいと期待しております。また、この職業訓練プログラムが、国際的なキャリア成功への第一歩となることを願っております。</p>
-                                                        </div>
-                                                </div>
-                                                <div class="col-sm-4">
-                                                        <div class="multilingual-card">
-                                                                <h5>English</h5>
-                                                                <p>We are pleased to present the company profile of LPK Asta Karya, made possible through the grace and blessings of Almighty God. This profile reflects our dedication to providing high-quality training programs aligned with the standards and demands of the Japanese labor market.</p>
-                                                                <p>Our programs are designed to cultivate practical expertise and a deep understanding of Japanese culture so participants can adapt seamlessly to professional and social environments in Japan.</p>
-                                                                <p>We extend our sincere gratitude to all stakeholders for their support and believe this initiative will serve as a solid foundation for sustainable careers in the international labor market.</p>
-                                                        </div>
-                                                </div>
+                                        <div class="multilingual-card">
+                                                {{ if eq .Lang "jp" }}
+                                                <h5>日本語</h5>
+                                                <p>まず初めに、LPK ASTA KARYA職業訓練機関の企業紹介資料を皆様にお届けできることを、心より光栄に存じます。これはひとえに神のご加護と関係者の皆様のご支援の賜物であると、深く感謝申し上げます。</p>
+                                                <p>ASTA KARYA は、日本の労働市場のニーズに応じた質の高い訓練を提供することを使命とし、参加者が国際社会でも通用するスキルと能力を身につけられるよう努めております。</p>
+                                                <p>訓練生の皆様には、この貴重な機会を最大限に活かし、より明るい未来への一歩を踏み出していただきたいと期待しております。また、この職業訓練プログラムが、国際的なキャリア成功への第一歩となることを願っております。</p>
+                                                {{ else if eq .Lang "en" }}
+                                                <h5>English</h5>
+                                                <p>We are pleased to present the company profile of LPK Asta Karya, made possible through the grace and blessings of Almighty God. This profile reflects our dedication to providing high-quality training programs aligned with the standards and demands of the Japanese labor market.</p>
+                                                <p>Our programs are designed to cultivate practical expertise and a deep understanding of Japanese culture so participants can adapt seamlessly to professional and social environments in Japan.</p>
+                                                <p>We extend our sincere gratitude to all stakeholders for their support and believe this initiative will serve as a solid foundation for sustainable careers in the international labor market.</p>
+                                                {{ else }}
+                                                <h5>Bahasa Indonesia</h5>
+                                                <p>Puji dan syukur kami panjatkan ke hadirat Tuhan Yang Maha Esa, karena atas rahmat dan karunia-Nya, kami dapat menyusun dan menghadirkan company profile Lembaga Pelatihan Kerja (LPK) Asta Karya ke Jepang ini. Lembaga kami berkomitmen untuk memberikan program pelatihan yang berkualitas dan sesuai dengan standar kebutuhan pasar kerja di Jepang, sehingga para peserta pelatihan dapat memiliki keterampilan dan kompetensi yang memadai untuk bersaing secara global.</p>
+                                                <p>Program pelatihan ini dirancang dengan tujuan memberikan bekal keahlian praktis dan wawasan budaya yang mendalam tentang Jepang. Kami percaya kesempatan untuk bekerja dan berkarir di Jepang dapat diwujudkan secara optimal melalui persiapan menyeluruh yang kami sediakan.</p>
+                                                <p>Kami mengucapkan terima kasih kepada semua pihak yang telah mendukung terlaksananya program ini. Semoga program pelatihan ini membawa manfaat besar dan menjadi langkah awal yang baik dalam meraih kesuksesan di dunia kerja internasional.</p>
+                                                {{ end }}
                                         </div>
                                 </div>
                         </div>
@@ -95,12 +93,43 @@
                                 <div class="col-md-12">
                                         <h2>Profil Perusahaan</h2>
                                         <hr>
-                                        <p class="lead">Informasi lengkap LPK Asta Karya dalam bahasa Indonesia, Jepang, dan Inggris.</p>
+                                        {{ if eq .Lang "jp" }}
+                                        <p class="lead">LPKアスタ・カルヤに関する主要情報。</p>
+                                        {{ else if eq .Lang "en" }}
+                                        <p class="lead">Key company information for LPK Asta Karya.</p>
+                                        {{ else }}
+                                        <p class="lead">Informasi utama mengenai LPK Asta Karya.</p>
+                                        {{ end }}
                                 </div>
                         </div>
                         <div class="row wow fadeInUp" data-wow-delay="0.3s">
-                                <div class="col-md-4 col-sm-6">
+                                <div class="col-md-8 col-md-offset-2">
                                         <div class="profile-card">
+                                                {{ if eq .Lang "jp" }}
+                                                <h5>日本語</h5>
+                                                <ul class="profile-list">
+                                                        <li><strong>訓練機関名:</strong> LPK Asta Karya （アスタ・カルヤ職業訓練機関）</li>
+                                                        <li><strong>代表者名:</strong> ムハンマド・アリフ・ラマダン</li>
+                                                        <li><strong>本社所在地:</strong> Ruko No.3B, Jl. Pasar Minggu Raya KM.19 No.3B, RT.003 / RW.05, Pejaten Barat, Pasar Minggu, Jakarta Selatan 12510</li>
+                                                        <li><strong>電話番号:</strong> +62 822-1002-0247（インドネシア語対応） / +62 822-9933-8862（日本語対応）</li>
+                                                        <li><strong>研修センター所在地:</strong> Jl. H. Ibrahim Adjie No.99, RT.03 / RW.02, Cijawura, Buah Batu, Kota Bandung 40287</li>
+                                                        <li><strong>研修センター電話:</strong> +62 822-1002-0246（インドネシア語対応） / +62 822-9933-8862（日本語対応）</li>
+                                                        <li><strong>Eメール:</strong> astakarya.adm@gmail.com</li>
+                                                        <li><strong>送出機関許可番号:</strong> 2/4473/HK.03.01/XI/2023</li>
+                                                </ul>
+                                                {{ else if eq .Lang "en" }}
+                                                <h5>English</h5>
+                                                <ul class="profile-list">
+                                                        <li><strong>Company Name:</strong> LPK Asta Karya (Vocational Training Institute)</li>
+                                                        <li><strong>Director:</strong> Muhammad Arif Ramadhan</li>
+                                                        <li><strong>Head Office:</strong> Ruko No.3B, Jl. Pasar Minggu Raya KM.19 No.3B, RT.003 RW.05, Pejaten Barat, Pasar Minggu, South Jakarta 12510</li>
+                                                        <li><strong>Office Phone:</strong> +62 822-1002-0247 / +62 822-9933-8862 (WA &amp; LINE)</li>
+                                                        <li><strong>Training Center:</strong> Jl. H. Ibrahim Adjie No.99, RT.03 / RW.02, Cijawura, Buah Batu, Bandung City 40287</li>
+                                                        <li><strong>Training Center Phone:</strong> +62 822-1002-0246 / +62 822-9933-8862 (WA &amp; LINE)</li>
+                                                        <li><strong>Email:</strong> astakarya.adm@gmail.com</li>
+                                                        <li><strong>SO License:</strong> 2/4473/HK.03.01/XI/2023</li>
+                                                </ul>
+                                                {{ else }}
                                                 <h5>Bahasa Indonesia</h5>
                                                 <ul class="profile-list">
                                                         <li><strong>Nama Lembaga:</strong> Lembaga Pelatihan Kerja (LPK) Asta Karya</li>
@@ -113,36 +142,7 @@
                                                         <li><strong>Email:</strong> astakarya.adm@gmail.com</li>
                                                         <li><strong>Nomor Izin SO:</strong> 2/4473/HK.03.01/XI/2023</li>
                                                 </ul>
-                                        </div>
-                                </div>
-                                <div class="col-md-4 col-sm-6">
-                                        <div class="profile-card">
-                                                <h5>日本語</h5>
-                                                <ul class="profile-list">
-                                                        <li><strong>訓練機関名:</strong> LPK Asta Karya （アスタ・カルヤ職業訓練機関）</li>
-                                                        <li><strong>代表者名:</strong> ムハンマド・アリフ・ラマダン</li>
-                                                        <li><strong>本社所在地:</strong> Ruko No.3B, Jl. Pasar Minggu Raya KM.19 No.3B, RT.003 / RW.05, Pejaten Barat, Pasar Minggu, Jakarta Selatan 12510</li>
-                                                        <li><strong>電話番号:</strong> +62 822-1002-0247（インドネシア語対応） / +62 822-9933-8862（日本語対応）</li>
-                                                        <li><strong>研修センター所在地:</strong> Jl. H. Ibrahim Adjie No.99, RT.03 / RW.02, Cijawura, Buah Batu, Kota Bandung 40287</li>
-                                                        <li><strong>研修センター電話:</strong> +62 822-1002-0246（インドネシア語対応） / +62 822-9933-8862（日本語対応）</li>
-                                                        <li><strong>Eメール:</strong> astakarya.adm@gmail.com</li>
-                                                        <li><strong>送出機関許可番号:</strong> 2/4473/HK.03.01/XI/2023</li>
-                                                </ul>
-                                        </div>
-                                </div>
-                                <div class="col-md-4 col-sm-6">
-                                        <div class="profile-card">
-                                                <h5>English</h5>
-                                                <ul class="profile-list">
-                                                        <li><strong>Company Name:</strong> LPK Asta Karya (Vocational Training Institute)</li>
-                                                        <li><strong>Director:</strong> Muhammad Arif Ramadhan</li>
-                                                        <li><strong>Head Office:</strong> Ruko No.3B, Jl. Pasar Minggu Raya KM.19 No.3B, RT.003 RW.05, Pejaten Barat, Pasar Minggu, South Jakarta 12510</li>
-                                                        <li><strong>Office Phone:</strong> +62 822-1002-0247 / +62 822-9933-8862 (WA &amp; LINE)</li>
-                                                        <li><strong>Training Center:</strong> Jl. H. Ibrahim Adjie No.99, RT.03 / RW.02, Cijawura, Buah Batu, Bandung City 40287</li>
-                                                        <li><strong>Training Center Phone:</strong> +62 822-1002-0246 / +62 822-9933-8862 (WA &amp; LINE)</li>
-                                                        <li><strong>Email:</strong> astakarya.adm@gmail.com</li>
-                                                        <li><strong>SO License:</strong> 2/4473/HK.03.01/XI/2023</li>
-                                                </ul>
+                                                {{ end }}
                                         </div>
                                 </div>
                         </div>
@@ -157,29 +157,31 @@
                                 <div class="col-md-12">
                                         <h2>Latar Belakang</h2>
                                         <hr>
-                                        <p class="lead">Sejarah berdirinya LPK Asta Karya dan tujuan mulia yang mengiringinya.</p>
+                                        {{ if eq .Lang "jp" }}
+                                        <p class="lead">LPKアスタ・カルヤ設立の歩みと目的。</p>
+                                        {{ else if eq .Lang "en" }}
+                                        <p class="lead">The story behind LPK Asta Karya and its founding mission.</p>
+                                        {{ else }}
+                                        <p class="lead">Sejarah berdirinya LPK Asta Karya dan tujuan yang mengiringinya.</p>
+                                        {{ end }}
                                 </div>
                         </div>
                         <div class="row wow fadeInUp" data-wow-delay="0.3s">
-                                <div class="col-md-4 col-sm-6">
+                                <div class="col-md-8 col-md-offset-2">
                                         <div class="multilingual-card">
-                                                <h5>Bahasa Indonesia</h5>
-                                                <p align="justify">LPK Asta Karya merupakan Sending Organization resmi yang berdiri sejak Desember 2016 di bawah naungan PT. Ladang Berdikari Indonesia. Pendirinya adalah alumni jurusan Bahasa Jepang yang juga lulusan sekolah bahasa di Prefektur Shizuoka, Jepang. Lembaga ini hadir untuk membuka kesempatan generasi muda Indonesia merasakan atmosfer belajar dan bekerja di Jepang.</p>
-                                                <p align="justify">Pengalaman langsung pendiri di berbagai sektor pekerjaan di Jepang menumbuhkan pemahaman mendalam tentang etos kerja, kedisiplinan, dan tata krama masyarakat Jepang. Nilai-nilai positif tersebut kini ditanamkan kepada peserta program melalui fasilitasi pemagangan resmi di perusahaan mitra Jepang.</p>
-                                        </div>
-                                </div>
-                                <div class="col-md-4 col-sm-6">
-                                        <div class="multilingual-card">
+                                                {{ if eq .Lang "jp" }}
                                                 <h5>日本語</h5>
-                                                <p align="justify">アスタ・カルヤは2016年12月に設立された送出機関であり、PT. Ladang Berdikari Indonesia の傘下にあります。創設者は日本語専攻の大学卒業生で、静岡県の日本語学校を修了しています。日本での学習と労働体験を若者へ橋渡しすることが設立の目的です。</p>
+                                                <p align="justify">アスタ・カルヤは2016年12月に設立された送出機関であり、PT. Ladang Berdikari Indonesia の傘下にあります。創設者は日本語専攻の大学卒業生で、静岡県の日本語学校を修了しています。日本で学習と労働体験を若者へ橋渡しすることが設立の目的です。</p>
                                                 <p align="justify">創設者は日本滞在中にコンビニ、レストラン、工場などで働き、日本社会の規律や仕事文化を体感しました。これらの価値観を若者へ共有するため、正式な企業との連携による実習機会を提供しています。</p>
-                                        </div>
-                                </div>
-                                <div class="col-md-4 col-sm-6">
-                                        <div class="multilingual-card">
+                                                {{ else if eq .Lang "en" }}
                                                 <h5>English</h5>
                                                 <p align="justify">Established in December 2016 under PT. Ladang Berdikari Indonesia, LPK Asta Karya is an accredited Sending Organization headquartered in South Jakarta. Founded by a Japanese language graduate who studied in Shizuoka, the institute empowers Indonesian youth to experience education and internships in Japan firsthand.</p>
                                                 <p align="justify">The founder’s exposure to diverse Japanese workplaces cultivated a deep appreciation for discipline, punctuality, and professionalism. These values now guide the institute’s programs, enabling trainees to absorb technical skills alongside world-class work ethics.</p>
+                                                {{ else }}
+                                                <h5>Bahasa Indonesia</h5>
+                                                <p align="justify">LPK Asta Karya merupakan Sending Organization resmi yang berdiri sejak Desember 2016 di bawah naungan PT. Ladang Berdikari Indonesia. Pendirinya adalah alumni jurusan Bahasa Jepang yang juga lulusan sekolah bahasa di Prefektur Shizuoka, Jepang. Lembaga ini hadir untuk membuka kesempatan generasi muda Indonesia merasakan atmosfer belajar dan bekerja di Jepang.</p>
+                                                <p align="justify">Pengalaman langsung pendiri di berbagai sektor pekerjaan di Jepang menumbuhkan pemahaman mendalam tentang etos kerja, kedisiplinan, dan tata krama masyarakat Jepang. Nilai-nilai positif tersebut kini ditanamkan kepada peserta program melalui fasilitasi pemagangan resmi di perusahaan mitra Jepang.</p>
+                                                {{ end }}
                                         </div>
                                 </div>
                         </div>
@@ -194,25 +196,19 @@
                                 <div class="col-md-12">
                                         <h2>Visi &amp; Misi</h2>
                                         <hr>
-                                        <p class="lead">Komitmen LPK Asta Karya membentuk generasi Indonesia yang siap bersaing di Jepang.</p>
+                                        {{ if eq .Lang "jp" }}
+                                        <p class="lead">LPKアスタ・カルヤのビジョンとミッション。</p>
+                                        {{ else if eq .Lang "en" }}
+                                        <p class="lead">LPK Asta Karya’s vision and mission for future-ready talents.</p>
+                                        {{ else }}
+                                        <p class="lead">Komitmen LPK Asta Karya membentuk generasi siap bersaing di Jepang.</p>
+                                        {{ end }}
                                 </div>
                         </div>
                         <div class="row wow fadeInUp" data-wow-delay="0.3s">
-                                <div class="col-md-4 col-sm-6">
+                                <div class="col-md-8 col-md-offset-2">
                                         <div class="vision-card">
-                                                <h5>Bahasa Indonesia</h5>
-                                                <p align="justify"><strong>Visi:</strong> Menjadi lembaga pelatihan kerja terpercaya, profesional, dan berstandar internasional dalam menyiapkan tenaga kerja Indonesia yang kompeten, berkarakter, dan siap bersaing di dunia kerja global.</p>
-                                                <p align="justify"><strong>Misi:</strong></p>
-                                                <ul>
-                                                        <li>Memberdayakan generasi muda melalui pengalaman hidup dan kerja di Jepang.</li>
-                                                        <li>Meningkatkan kompetensi melalui pelatihan teknis dan bahasa Jepang yang relevan.</li>
-                                                        <li>Berperan dalam pengurangan pengangguran dengan mencetak tenaga siap pakai.</li>
-                                                        <li>Memperkuat hubungan internasional dan kontribusi global Indonesia–Jepang.</li>
-                                                </ul>
-                                        </div>
-                                </div>
-                                <div class="col-md-4 col-sm-6">
-                                        <div class="vision-card">
+                                                {{ if eq .Lang "jp" }}
                                                 <h5>日本語</h5>
                                                 <p align="justify"><strong>ビジョン:</strong> 国際労働市場で通用する能力と人格を備えたインドネシア人材を育成する信頼ある職業訓練機関となること。</p>
                                                 <p align="justify"><strong>ミッション:</strong></p>
@@ -222,10 +218,7 @@
                                                         <li>即戦力人材を育成し、失業率の低減に寄与する。</li>
                                                         <li>インドネシアと日本の協力を強化し、国際的な視野と社会的責任を高める。</li>
                                                 </ul>
-                                        </div>
-                                </div>
-                                <div class="col-md-4 col-sm-6">
-                                        <div class="vision-card">
+                                                {{ else if eq .Lang "en" }}
                                                 <h5>English</h5>
                                                 <p align="justify"><strong>Vision:</strong> To become a trusted, professional, and internationally recognized institute that prepares Indonesian workers to excel in Japan and beyond.</p>
                                                 <p align="justify"><strong>Mission:</strong></p>
@@ -235,6 +228,17 @@
                                                         <li>Reduce unemployment by producing highly productive, job-ready talent.</li>
                                                         <li>Strengthen Indonesia–Japan cooperation and nurture global citizenship.</li>
                                                 </ul>
+                                                {{ else }}
+                                                <h5>Bahasa Indonesia</h5>
+                                                <p align="justify"><strong>Visi:</strong> Menjadi lembaga pelatihan kerja terpercaya, profesional, dan berstandar internasional dalam menyiapkan tenaga kerja Indonesia yang kompeten, berkarakter, dan siap bersaing di dunia kerja global.</p>
+                                                <p align="justify"><strong>Misi:</strong></p>
+                                                <ul>
+                                                        <li>Memberdayakan generasi muda melalui pengalaman hidup dan kerja di Jepang.</li>
+                                                        <li>Meningkatkan kompetensi melalui pelatihan teknis dan bahasa Jepang yang relevan.</li>
+                                                        <li>Berperan dalam pengurangan pengangguran dengan mencetak tenaga siap pakai.</li>
+                                                        <li>Memperkuat hubungan internasional dan kontribusi global Indonesia–Jepang.</li>
+                                                </ul>
+                                                {{ end }}
                                         </div>
                                 </div>
                         </div>
@@ -269,7 +273,13 @@
                                 <div class="col-md-12">
                                         <h2>Laporan Pengiriman Siswa</h2>
                                         <hr>
+                                        {{ if eq .Lang "jp" }}
+                                        <p class="lead">派遣実績、配置マップ、研修生プロフィールをまとめたダッシュボード。</p>
+                                        {{ else if eq .Lang "en" }}
+                                        <p class="lead">Placement history, an interactive internship map, and trainee profile highlights.</p>
+                                        {{ else }}
                                         <p class="lead">Rekam jejak penempatan, pemetaan lokasi magang, dan infografis profil siswa.</p>
+                                        {{ end }}
                                 </div>
                         </div>
                 </div>
@@ -279,7 +289,26 @@
                                         <div class="row">
                                                 <div class="divider_map-des">
                                                         <h3 class="text-uppercase">{{ .Home.MapHeader }} : {{ .Home.MapContent }}</h3>
-                                                        <div id="map"></div>
+                                                        {{ if .Home.MapEmbedURL }}
+                                                        <div class="map-embed">
+                                                                <div class="map-responsive">
+                                                                        <iframe src="{{ .Home.MapEmbedURL }}" allowfullscreen loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                                                                </div>
+                                                                {{ if .Home.MapEmbedNote }}
+                                                                <p class="map-note">{{ .Home.MapEmbedNote }}</p>
+                                                                {{ end }}
+                                                        </div>
+                                                        {{ else }}
+                                                        <div class="map-embed map-embed--empty">
+                                                                {{ if eq .Lang "jp" }}
+                                                                <p class="map-placeholder">Googleマップの埋め込みがまだ設定されていません。</p>
+                                                                {{ else if eq .Lang "en" }}
+                                                                <p class="map-placeholder">Google Maps embed is not configured yet.</p>
+                                                                {{ else }}
+                                                                <p class="map-placeholder">Google Maps embed belum dikonfigurasi.</p>
+                                                                {{ end }}
+                                                        </div>
+                                                        {{ end }}
                                                 </div>
                                         </div>
                                 </div>

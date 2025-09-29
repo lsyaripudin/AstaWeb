@@ -7,6 +7,8 @@
   "slide3H2": "Fasilitas asrama modern dengan instruktur alumni Jepang memastikan pembelajaran intensif dan pendampingan harian bagi setiap peserta.",
   "mapHeader": "Total Peserta",
   "mapContent": "5000",
+  "mapEmbedUrl": "https://www.google.com/maps?q=Japan&output=embed",
+  "mapEmbedNote": "Peta ini terhubung dengan Google Maps yang menarik data langsung dari spreadsheet monitoring penempatan LPK Asta Karya.",
   "heroTitle": "Dokumentasi Resmi LPK Asta Karya",
   "heroSubtitle": "Seluruh informasi terbaru kami kini terpusat dalam dokumen Google yang selalu diperbarui oleh tim LPK Asta Karya.",
   "heroButtonLabel": "Buka Dokumen Lengkap",
