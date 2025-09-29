@@ -1,148 +1,166 @@
 {{ define "content" }}
-        <!-- start home -->
-        <section id="home">
-                <div class="overlay">
-                        <div class="flexslider">
-                                <ul class="slides">
-                                        <li>
-                                                <img src="/static/images/slider/1.jpg" alt="Slide 1">
-                                                <div class="slider-caption">
-                                                        <div class="templatemo_homewrapper">
-                                                                <h1 style="color: rgb(35,147,224);" class="wow bounceIn">{{ .Home.Home1H1 }}</h1>
-                                                                <h3 class="wow bounce">{{ .Home.Home1H3 }}</h3>
-                                                        </div>
-                                                </div>
-                                        </li>
-                                        <li>
-                                                <img src="/static/images/slider/2.jpg" alt="Slide 2">
-                                                <div class="slider-caption">
-                                                        <div class="templatemo_homewrapper">
-                                                                <h1 style="color: black;">{{ .Home.Home2H1 }}</h1>
-                                                                <h3>{{ .Home.Home2H3 }}</h3>
-                                                        </div>
-                                                </div>
-                                        </li>
-                                        <li>
-                                                <img src="/static/images/slider/3.jpg" alt="Slide 3">
-                                                <div class="slider-caption">
-                                                        <div class="templatemo_homewrapper">
-                                                                <h1 style="color: orange;">{{ .Home.Home3H1 }}</h1>
-                                                                <h3>{{ .Home.Home3H3 }}</h3>
-                                                        </div>
-                                                </div>
-                                        </li>
-                                </ul>
-                        </div>
-                </div>
-        </section>
-        <!-- end home -->
 
-        <!-- start map -->
-        <div class="divider_map">
-                <div class="overlay_map">
-                        <div class="container">
-                                <div class="row">
-                                        <div class="divider_map-des">
-                                                <h3 class="text-uppercase">{{ .Home.MapHeader }} : {{ .Home.MapContent }}</h3>
-                                                <div id="map"></div>
-                                        </div>
-                                </div>
-                        </div>
-                </div>
+<!-- start home -->
+<section id="home" class="hero-section">
+    <div class="hero-overlay">
+        <div class="container">
+            <div class="hero-content">
+                <span class="hero-subtitle">LPK ASTA KARYA</span>
+                <h1 class="hero-title">Membuka Jalan Menuju Karier Global di Jepang</h1>
+                <p class="hero-text">
+                    Lembaga Pelatihan Kerja Asta Karya menghadirkan pelatihan terpadu, pembinaan karakter,
+                    dan pendampingan menyeluruh agar generasi muda Indonesia siap bersaing di lingkungan profesional Jepang.
+                </p>
+                <a href="#foreword" class="btn btn-primary hero-btn smoothScroll">Jelajahi Profil Kami</a>
+            </div>
         </div>
-        <!-- end map -->
+    </div>
+</section>
+<!-- end home -->
 
-        <!-- start document section -->
-        <section id="document" class="document-section">
-                <div class="container">
-                        <div class="row">
-                                <div class="col-md-6 col-sm-6 wow fadeInLeft" data-wow-delay="0.3s">
-                                        <div class="document-copy">
-                                                <h2>{{ .Home.HeroTitle }}</h2>
-                                                <hr>
-                                                <p>{{ .Home.HeroSubtitle }}</p>
-                                                <a href="{{ .Home.DocURL }}" target="_blank" rel="noopener" class="btn btn-default text-uppercase document-btn">{{ .Home.HeroButtonLabel }}</a>
-                                                <p class="document-note">{{ .Home.HeroSupport }}</p>
-                                                <p class="document-note">{{ .Home.DocNote }}</p>
-                                        </div>
-                                </div>
-                                <div class="col-md-6 col-sm-6 wow fadeInRight" data-wow-delay="0.6s">
-                                        <div class="document-frame">
-                                                {{ if .Home.DocEmbedURL }}
-                                                <iframe src="{{ .Home.DocEmbedURL }}" title="Dokumen Resmi LPK Asta Karya" loading="lazy"></iframe>
-                                                {{ else }}
-                                                <div class="document-placeholder">
-                                                        <p>Pratinjau dokumen tidak tersedia. Silakan gunakan tombol di samping untuk membuka dokumen lengkap.</p>
-                                                </div>
-                                                {{ end }}
-                                        </div>
-                                </div>
+<!-- start slider (opsional dynamic) -->
+<section id="home-slider">
+    <div class="overlay">
+        <div class="flexslider">
+            <ul class="slides">
+                <li>
+                    <img src="/static/images/slider/1.jpg" alt="Slide 1">
+                    <div class="slider-caption">
+                        <div class="templatemo_homewrapper">
+                            <h1 style="color: rgb(35,147,224);" class="wow bounceIn">{{ .Home.Home1H1 }}</h1>
+                            <h3 class="wow bounce">{{ .Home.Home1H3 }}</h3>
                         </div>
-                </div>
-        </section>
-        <!-- end document section -->
-
-        {{ if .Home.Highlights }}
-        <section id="highlights" class="document-highlights">
-                <div class="container">
-                        <div class="row text-center wow bounceIn" data-wow-delay="0.3s">
-                                <div class="col-md-12">
-                                        <h2>{{ .Header.Highlights }}</h2>
-                                        <hr>
-                                        <p class="lead">Ringkasan nilai tambah yang tersedia dalam dokumen resmi LPK Asta Karya.</p>
-                                </div>
+                    </div>
+                </li>
+                <li>
+                    <img src="/static/images/slider/2.jpg" alt="Slide 2">
+                    <div class="slider-caption">
+                        <div class="templatemo_homewrapper">
+                            <h1 style="color: black;">{{ .Home.Home2H1 }}</h1>
+                            <h3>{{ .Home.Home2H3 }}</h3>
                         </div>
-                        <div class="row">
-                                {{ range .Home.Highlights }}
-                                <div class="col-md-4 col-sm-4 wow fadeInUp" data-wow-delay="0.3s">
-                                        <div class="highlight-card">
-                                                <div class="highlight-icon"><i class="fa {{ .Icon }}"></i></div>
-                                                <h4>{{ .Title }}</h4>
-                                                <p>{{ .Description }}</p>
-                                        </div>
-                                </div>
-                                {{ end }}
+                    </div>
+                </li>
+                <li>
+                    <img src="/static/images/slider/3.jpg" alt="Slide 3">
+                    <div class="slider-caption">
+                        <div class="templatemo_homewrapper">
+                            <h1 style="color: orange;">{{ .Home.Home3H1 }}</h1>
+                            <h3>{{ .Home.Home3H3 }}</h3>
                         </div>
-                </div>
-        </section>
-        {{ end }}
-        <!-- end highlights section -->
-
-        {{ template "about" . }}
-
-        {{ template "program" . }}
-
-        <!-- start divider -->
-        <div class="divider">
-                <div class="overlay">
-                        <div class="container">
-                                <div class="row">
-                                        <div class="divider-des">
-                                                <h3 class="text-uppercase">LPK ASTA KARYA</h3>
-                                                <p>Lembaga Penyalur Kerja Asta Karya Indonesia</p>
-                                        </div>
-                                </div>
-                        </div>
-                </div>
+                    </div>
+                </li>
+            </ul>
         </div>
-        <!-- end divider -->
+    </div>
+</section>
+<!-- end slider -->
 
-        {{ template "training" . }}
-
-        <!-- start divider -->
-        <div class="divider" style="margin-top: 50px; margin-bottom: 50px;">
-                <div class="overlay">
-                        <div class="container">
-                                <div class="row">
-                                        <div class="divider-des">
-                                                <h3 class="text-uppercase">LPK ASTA KARYA</h3>
-                                                <p>Lembaga Penyalur Kerja Asta Karya Indonesia</p>
-                                        </div>
-                                </div>
-                        </div>
+<!-- start map -->
+<div class="divider_map">
+    <div class="overlay_map">
+        <div class="container">
+            <div class="row">
+                <div class="divider_map-des">
+                    <h3 class="text-uppercase">{{ .Home.MapHeader }} : {{ .Home.MapContent }}</h3>
+                    <div id="map"></div>
                 </div>
+            </div>
         </div>
-        <!-- end divider -->
+    </div>
+</div>
+<!-- end map -->
 
-        {{ template "media" . }}
+<!-- foreword section -->
+<section id="foreword" class="section-padding">
+    <div class="container">
+        <div class="section-header text-center">
+            <span class="section-subtitle">KATA PENGANTAR</span>
+            <h2 class="section-title">Foreword</h2>
+            <p class="section-lead">Ucapan syukur dan komitmen kami dalam menghadirkan pelatihan berkualitas bertaraf internasional.</p>
+        </div>
+        <div class="row align-items-stretch">
+            <div class="col-md-4">
+                <div class="content-card h-100">
+                    <h3>Bahasa Indonesia</h3>
+                    <p>Puji dan syukur kami panjatkan ke hadirat Tuhan Yang Maha Esa ...</p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="content-card h-100">
+                    <h3>日本語</h3>
+                    <p>まず初めに、LPK ASTA KARYA職業訓練機関の企業紹介資料を ...</p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="content-card h-100">
+                    <h3>English</h3>
+                    <p>We are pleased to present the company profile of LPK Asta Karya ...</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- document section -->
+<section id="document" class="document-section">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 wow fadeInLeft" data-wow-delay="0.3s">
+                <div class="document-copy">
+                    <h2>{{ .Home.HeroTitle }}</h2>
+                    <hr>
+                    <p>{{ .Home.HeroSubtitle }}</p>
+                    <a href="{{ .Home.DocURL }}" target="_blank" rel="noopener" class="btn btn-default text-uppercase document-btn">{{ .Home.HeroButtonLabel }}</a>
+                    <p class="document-note">{{ .Home.HeroSupport }}</p>
+                    <p class="document-note">{{ .Home.DocNote }}</p>
+                </div>
+            </div>
+            <div class="col-md-6 wow fadeInRight" data-wow-delay="0.6s">
+                <div class="document-frame">
+                    {{ if .Home.DocEmbedURL }}
+                    <iframe src="{{ .Home.DocEmbedURL }}" title="Dokumen Resmi LPK Asta Karya" loading="lazy"></iframe>
+                    {{ else }}
+                    <div class="document-placeholder">
+                        <p>Pratinjau dokumen tidak tersedia. Silakan gunakan tombol di samping untuk membuka dokumen lengkap.</p>
+                    </div>
+                    {{ end }}
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- highlights (dynamic) -->
+{{ if .Home.Highlights }}
+<section id="highlights" class="document-highlights">
+    <div class="container">
+        <div class="row text-center wow bounceIn" data-wow-delay="0.3s">
+            <div class="col-md-12">
+                <h2>{{ .Header.Highlights }}</h2>
+                <hr>
+                <p class="lead">Ringkasan nilai tambah yang tersedia dalam dokumen resmi LPK Asta Karya.</p>
+            </div>
+        </div>
+        <div class="row">
+            {{ range .Home.Highlights }}
+            <div class="col-md-4 wow fadeInUp" data-wow-delay="0.3s">
+                <div class="highlight-card">
+                    <div class="highlight-icon"><i class="fa {{ .Icon }}"></i></div>
+                    <h4>{{ .Title }}</h4>
+                    <p>{{ .Description }}</p>
+                </div>
+            </div>
+            {{ end }}
+        </div>
+    </div>
+</section>
+{{ end }}
+<!-- end highlights -->
+
+{{ template "about" . }}
+{{ template "program" . }}
+{{ template "training" . }}
+{{ template "media" . }}
+
 {{ end }}

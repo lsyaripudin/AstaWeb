@@ -7,15 +7,26 @@ import (
 	"net/http"
 	"os"
 
-	"asta-karya/app"
 	"asta-karya/controllers"
 
 	"github.com/gin-gonic/gin"
 )
 
 type Header struct {
-	Title      string `json:"title"`
-	Home       string `json:"home"`
+	Title          string `json:"title"`
+	Home           string `json:"home"`
+	Foreword       string `json:"foreword"`
+	Profile        string `json:"profile"`
+	Background     string `json:"background"`
+	VisionMission  string `json:"visionMission"`
+	Organization   string `json:"organization"`
+	Reports        string `json:"reports"`
+	TrainingCenter string `json:"trainingCenter"`
+	TrainingTeam   string `json:"trainingTeam"`
+	Curriculum     string `json:"curriculum"`
+	Recruitment    string `json:"recruitment"`
+	Gallery        string `json:"gallery"`
+	Youtube        string `json:"youtube"`
 	About      string `json:"about"`
 	Program    string `json:"program"`
 	Training   string `json:"training"`
@@ -50,15 +61,8 @@ func main() {
 			log.Println("Error loading header:", err)
 		}
 
-		homeData, err := app.LoadJSONFile(lang)
-		if err != nil {
-			log.Println("Error loading home data", err)
-			homeData = nil
-		}
-
 		c.HTML(http.StatusOK, "layout.html", gin.H{
 			"Header": header,
-			"Home":   homeData,
 			"Lang":   lang,
 		})
 	})
